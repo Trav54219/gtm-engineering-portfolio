@@ -15,6 +15,35 @@ I work with Claude Code as the daily workspace. The copy is mine; the agent hand
 | [`skills/`](skills) | A Claude Code skill I use before any paid data call. |
 | [`runbooks/`](runbooks) | The launch order I follow and why. |
 
+## Stack
+
+| Job | Tool |
+| --- | --- |
+| Sending, sequences, inbox replies | Smartlead (API and MCP) |
+| Company and people data | Blitz, MoltSets, TheirStack (hiring signals), Apify (Maps) |
+| Priced data calls and enrichment | treg, with a price sweep before any paid call (`skills/treg-price-sweep`) |
+| Web reads and research | TinyFish |
+| Daily workspace, scripts and guards | Claude Code, Python |
+
+The guards in `guards/` call the Smartlead API directly, so they run on any campaign without the dashboard.
+
+## A real email
+
+This is the first email of the sequence I am sending to hiring managers for this job search (Smartlead campaign, merge fields in double braces). `{{fact}}` is a public fact about their company, `{{q}}` is a question about it, `{{subj}}` is the subject.
+
+> {{first_name}}, {{fact}}.
+>
+> {{q}}
+>
+> I build the lists, enrichment, sending setup and copy. I can sketch what I'd set up first.
+>
+> Want me to send it over?
+>
+> Travis
+> GTM engineer and founder at Breezy Growth
+
+Why it is built this way: it opens on something true about them, asks one question, says what I do in one sentence, and asks for a yes to a one-page sketch instead of a call. No price, no link, no claim I can't show. The follow-up (day 7) says what the sketch contains: who I'd reach, a sample email in their voice, and the first 30 days, from public data only. The copy gate in `guards/copy_gate.py` checks every variant before it is built: 30 to 75 words, no banned words, the same ask in every variant.
+
 ## Where I'm honest about the numbers
 
 - Rates use **contacted leads** as the denominator. Reply-based rates are inflated by auto-replies from departed mailboxes: one campaign read 38% on replies and 0.52% on contacted.
