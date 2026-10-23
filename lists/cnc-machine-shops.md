@@ -20,4 +20,4 @@ About 333 verified leads from one source query plus a funnel. Preview drafted, n
 
 ## Spend
 
-About $1.10 against a $2 cap I'd set before starting.
+Search cost about $0.36 per 1,700 company rows and about $0.38 per 1,000 owner rows, with a $2 cap I set before starting. I don't have a verified total for the whole build, so I'm not quoting one.
