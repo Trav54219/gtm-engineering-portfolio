@@ -1,0 +1,17 @@
+titles:
+  - "Owner"
+  - "Founder"
+  - "CEO"
+  - "President"
+  - "VP Sales"
+  - "Head of Business Development"
+industries:
+  - "Manufacturing and industrial (machine shops, fabrication, contract manufacturing)"
+  - "Commercial services (commercial cleaning, landscaping, facilities)"
+  - "Logistics and 3PL"
+  - "B2B professional services sold on contracts"
+  - "Excluded: SaaS and software companies, marketing and lead-gen agencies"
+company_size: "10-200 employees"
+geos:
+  - "United States"
+summary: "Owners and sales leaders at US B2B companies that win large contracts (manufacturing, commercial services, logistics) and grow by referral, who need a steady flow of new buyer conversations without hiring an SDR team."
