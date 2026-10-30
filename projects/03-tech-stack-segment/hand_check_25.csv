@@ -1,0 +1,26 @@
+company,domain,pass,techsight_said,verdict,what_i_found
+Yieldmo,yieldmo.com,deep,"Amazon SES, Amazon Web Services, OneTrust, Pardot",missed,Pardot right (info. CNAME to go.pardot.com). Missed Mailchimp: servers.mcsv.net in SPF.
+Coram AI,coram.ai,lite,"Atlassian Statuspage, HubSpot, Sendgrid",right,HubSpot from SPF.
+"livingHR, Inc.",livinghr.com,lite,"LinkedIn Insight Tag, HubSpot, HubSpot CMS Hub, LinkedIn Ads",right,"HubSpot (SPF + scripts), LinkedIn Insight tag inline."
+Inworld AI,inworld.ai,lite,Next.js,missed,First run gave Next.js only. HubSpot in SPF and a Klaviyo verification record missed; the 50-worker rerun found HubSpot.
+Pixability,pixability.com,lite,"Salesforce, Amazon SES, Amazon Web Services, Atlassian, Heroku, HubSpot, Next.js",right,Salesforce and HubSpot both in SPF.
+Datafold,datafold.com,lite,"LinkedIn Insight Tag, Salesforce, Amazon SES, Amazon Web Services, LinkedIn Ads, Salesforce Marketing Cloud Account Engagement",right,"Salesforce + Pardot in DNS, LinkedIn Insight inline."
+The Suite,thesuite.com,lite,RB2B,right,RB2B inline loader.
+Eon.io,eon.io,lite,Salesforce,missed,Salesforce right. HubSpot in SPF missed on both lite runs; a single scan finds it.
+Factory,factory.ai,lite,"Salesforce, Twitter/X Ads",unconfirmed,Salesforce only from factory.my.salesforce.com existing. A generic word; nothing ties that org to this company.
+Tenon,tenonhq.com,deep,"HubSpot, LinkedIn Insight Tag",wrong,"HubSpot right (go. CNAME to HubSpot). ""LinkedIn Insight Tag"" came from a linkedin-site-verification TXT record, not a tag; no tag on the page."
+KUNGFU.AI,kungfu.ai,lite,"HubSpot Forms, RB2B",right,HubSpot Forms and RB2B inline.
+Freestone Capital Management,freestonecapital.com,lite,"OneTrust, Salesforce, WordPress, DocuSign, Dropbox",missed,Salesforce right (SPF). Missed HubSpot: the HubSpot WordPress plugin loads js-na2.hs-scripts.com.
+Posh,posh.vip,lite,"Facebook Pixel, RB2B, Salesforce, Heroku, HubSpot, Proton Mail, Stripe",missed,"HubSpot, RB2B, Facebook Pixel right. Help center runs on intercom.help, missed. Salesforce only from a guessed login subdomain."
+AIRCO,aircompany.com,lite,"Salesforce, Next.js",unconfirmed,"Salesforce only from aircompany.my.salesforce.com; plain login page, no SSO tie to the company."
+Adthena,adthena.com,lite,"HubSpot, Microsoft Ads, Salesforce, WordPress",right,"HubSpot, Salesforce, Microsoft Ads all backed."
+Arbor Energy,arbor.co,deep,Salesforce,unconfirmed,"Site behind a bot wall (202). Salesforce only from arbor.my.salesforce.com, a generic word."
+Nadia Care,nadiacare.com,lite,"Facebook Pixel, HubSpot",right,"HubSpot (SPF), Facebook Pixel inline."
+Chamelio,chamelio.ai,deep,"Amazon SES, Amazon Web Services, LinkedIn Insight Tag",wrong,"""LinkedIn Insight Tag"" from a linkedin-site-verification TXT record; no tag on the page."
+FormativGroup,formativgroup.io,lite,"CookieYes, Salesforce",unconfirmed,Salesforce only from a guessed login subdomain.
+Lightning AI,lightning.ai,lite,"Atlassian, HubSpot, Mailjet, Salesforce Marketing Cloud Account Engagement",right,"HubSpot, Pardot, Mailjet in DNS. A ""zoho"" string on the page is part of an image filename."
+Rasa,rasa.com,lite,"HubSpot, PostHog, Salesforce, Amazon SES, Amazon Web Services",right,"HubSpot, Salesforce, PostHog backed."
+Wealth.com,wealth.com,lite,"HubSpot, HubSpot Forms, Qualified, Salesforce, WordPress, Amazon SES, Amazon Web Services, DocuSign",right,"HubSpot, Qualified, Salesforce backed."
+Prokeep,prokeep.com,lite,"HubSpot, LinkedIn Insight Tag, RB2B, HubSpot CMS Hub, LinkedIn Ads",right,"HubSpot, LinkedIn Insight, RB2B backed."
+ITF Therapeutics LLC,itftherapeutics.com,lite,"Salesforce, WordPress, DocuSign",right,"Salesforce from a login subdomain, confirmed: it signs in through the company's own Microsoft tenant."
+PAX,pax.com,deep,"Salesforce, Atlassian, DocuSign, Dropbox, MailChimp",missed,Salesforce right. Missed Klaviyo: four klaviyo-site-verification records and a Klaviyo key on the page.
