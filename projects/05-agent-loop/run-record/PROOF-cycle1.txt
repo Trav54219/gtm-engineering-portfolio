@@ -1,0 +1,9 @@
+PROOF VERDICT (cycle 1): works
+Fresh clone of wt/p5-run-guide-hand-check, RUN.md followed in order, no fixes. Python 3.12.14, dig at /usr/bin/dig. All commands rc=0. Wall clock 4 s incl. venv + pip install.
+evidence.py: tenonhq.com 200 94222 / freestonecapital.com 200 45444 / factory.ai 200 233858
+markers.py:
+ tenonhq.com: techsight HubSpot, LinkedIn Insight Tag | markers HubSpot[dns], Pardot[html4], Google Tag Manager[html1], Webflow[dns+html4]
+ freestonecapital.com: techsight OneTrust, Salesforce, WordPress, DocuSign, Dropbox | markers HubSpot[html1], Salesforce[dns], Google Tag Manager[html1], Microsoft 365 (MX)[dns], Apple verif TXT[dns], WordPress[html54]
+ factory.ai: techsight Salesforce, Twitter/X Ads | markers Webflow[dns], Next.js[html44]
+tenonhq.com.txt contains linkedin-site-verification=... and v=spf1 ... include:22753661.spf08.hubspotemail.net; grep -c snap.licdn tenonhq.com.html -> 0 (grep rc=1 on zero matches).
+Prover notes for a stranger: html size differs 45444 (evidence.py) vs 45426 (markers.py) for freestonecapital, unexplained in RUN.md; pip upgrade notice looks like a warning; grep exits 1 on zero matches (not explained?); "5 minutes" vs 4 s real.

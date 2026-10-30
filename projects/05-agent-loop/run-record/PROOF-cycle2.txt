@@ -1,0 +1,7 @@
+PROOF VERDICT (cycle 2): works
+Fresh clone (new temp dir) of wt/p5-run-guide-hand-check at 74f7d74, RUN.md followed in order, no fixes. Python 3.12.14, dig /usr/bin/dig. Run 2 with clean TMPDIR: pip "Successfully installed ... curl_cffi-0.17.0", then pip notice "[notice] A new release of pip is available: 25.0.1 -> 26.2.2" (as RUN.md says). Wall clock 3 s incl. install.
+evidence.py rc=0: tenonhq.com 200 94222 / freestonecapital.com 200 45444 / factory.ai 200 233858
+markers.py rc=0: tenonhq.com html=94222 markers HubSpot[dns], Pardot[html4], Google Tag Manager[html1], Webflow[dns+html4] | freestonecapital.com html=45426 markers HubSpot[html1], Salesforce[dns], ... | factory.ai html=233858 markers Webflow[dns], Next.js[html44]
+45444 vs 45426 differ by 18 = \r\n line endings, exactly as RUN.md explains; other two equal.
+tenonhq.com.txt: SPF with 22753661.spf08.hubspotemail.net and linkedin-site-verification present. grep -c snap.licdn -> 0, exit 1, as RUN.md says.
+Prover's remaining stranger notes: macOS TMPDIR trailing slash prints "//" (harmless); `cd projects/...` assumes repo root; grep exit 1 could trip set -e; a reused p3venv/p3ev from an earlier run shows "Requirement already satisfied", not mentioned.

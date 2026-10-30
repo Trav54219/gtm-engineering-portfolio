@@ -1,0 +1,18 @@
+== gate cycle 2 Fri Oct 30 12:22:05 EDT 2026
+test -f RUN.md exit=0
+py_compile exit=0
+74f7d74 RUN.md: explain pip notice, grep exit 1, html length gap, out-of-scope tools
+ projects/03-tech-stack-segment/RUN.md | 12 +++++++-----
+ 1 file changed, 7 insertions(+), 5 deletions(-)
+ef9922c RUN.md: show full evidence file, note TXT order drift
+ projects/03-tech-stack-segment/RUN.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+976d02b Add RUN.md: reproduce the 3-domain hand check and score verdicts
+ projects/03-tech-stack-segment/RUN.md | 91 +++++++++++++++++++++++++++++++++++
+ 1 file changed, 91 insertions(+)
+96a91cb Add 3-row input CSV for the hand-check run guide
+ projects/03-tech-stack-segment/hand_check_3.csv | 4 ++++
+ 1 file changed, 4 insertions(+)
+outside-scope files:
+none
+em dashes in RUN.md: 0
