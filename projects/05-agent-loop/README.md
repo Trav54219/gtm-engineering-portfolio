@@ -90,7 +90,7 @@ neither was cost.
 - `run-record/GATE.txt`: my own re-run of the gate (cycle 2).
 - `run-record/PROOF-cycle1.txt`, `run-record/PROOF-cycle2.txt`: the Prover's real output.
 - `run-record/PROGRESS.md`: the Maker's notes, which the Checker was never shown.
-- The deliverable itself: [PR #1](https://github.com/Trav54219/gtm-engineering-portfolio/pull/1), open, not merged.
+- The deliverable itself: [PR #1](https://github.com/Trav54219/gtm-engineering-portfolio/pull/1), merged by me after the loop finished. The guide is now at [`projects/03-tech-stack-segment/RUN.md`](../03-tech-stack-segment/RUN.md).
 
 ## Post (Legion community)
 
