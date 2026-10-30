@@ -24,10 +24,10 @@ pip install curl_cffi
 mkdir -p "${TMPDIR:-/tmp}/p3ev"
 python scripts/evidence.py hand_check_3.csv "${TMPDIR:-/tmp}/p3ev"
 python scripts/markers.py hand_check_3.csv "${TMPDIR:-/tmp}/p3ev"
-head -8 "${TMPDIR:-/tmp}/p3ev/tenonhq.com.txt"
+cat "${TMPDIR:-/tmp}/p3ev/tenonhq.com.txt"
 ```
 
-`evidence.py` prints one line per domain: the domain, the HTTP status, and the length of the homepage HTML. It also writes `<domain>.txt` and `<domain>.html` into the evidence folder. Expect three lines with status 200 and a few seconds of run time.
+`evidence.py` prints one line per domain: the domain, the HTTP status, and the length of the homepage HTML. It also writes `<domain>.txt` and `<domain>.html` into the evidence folder. Expect three lines with status 200 and a few seconds of run time. The last command prints the whole tenonhq.com evidence file. DNS returns the TXT lines in a varying order, and `dig` can drop a line, so the `linkedin-site-verification` line may be missing on one run. If it is, rerun the `evidence.py` line.
 
 `markers.py` prints, for each domain, the tool's answer (`techsight:`) and a list of vendor markers found in the evidence (`markers  :`). In `HubSpot[dns]`, `dns` means the marker is in the DNS records and `html4` means it appears 4 times in the homepage. `dns+html4` means both.
 
