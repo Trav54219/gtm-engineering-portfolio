@@ -15,7 +15,7 @@ Built with LeadGrow's [linkedin-warm-leads](https://github.com/LeadGrowGTM/linke
 | Read the top 10 by hand | 10 | I'd email 7 | $0 | a cost-containment consultant, a non-US company, one that isn't clearly a cleaning company |
 | Growth filter (top 20) | 20 | 10 with a dated signal → **6** after a second read | $0 | 9 no signal, 1 not US, then by hand: 1 SaaS startup, 1 vendor-side role, 1 identity I couldn't confirm, 1 residential-only |
 | Email waterfall | 6 | 5 found | $0.0145 | see below |
-| Verify | 5 | 2 valid, 3 catch-all | $0.0036 | catch-all = the server accepts any address, so it can't be confirmed |
+| Verify | 5 | 2 valid, 3 catch-all | 5 DeBounce credits + $0.0036 cross-check | catch-all = the server accepts any address, so it can't be confirmed. DeBounce and MillionVerifier gave the same verdict on all 5 |
 | **Would send** | | **2** (house rule: valid only; the 3 catch-all are held) | **$0.38 total** | |
 
 Source profile (type, not name): founder of a 600-person commercial cleaning company who hosts a
@@ -31,15 +31,17 @@ Each step only saw the previous step's misses.
 | 2 | Our own database (prospect library, by domain) | 4 | 0 | $0 | n/a |
 | 3 | QuickEnrich (via treg, charged only on a hit) | 4 | 3 | $0.0145 | $0.0048 |
 | 4 | AI Ark (via treg, a miss is free) | 1 | 0 | $0 | n/a |
-| Verify | MillionVerifier (via treg) | 5 | 2 valid, 3 catch-all | $0.0036 | |
+| Verify | DeBounce (my verifier for this run) | 5 | 2 deliverable, 3 accept-all | 5 credits | |
+| Cross-check | MillionVerifier (via treg) | 5 | same 2 valid, same 3 catch-all | $0.0036 | |
 
 All emails: 5 found for $0.0145, **$0.003 per email**. Generic info@ addresses on the websites
 did not count. No address was guessed from a pattern. One of the 6 has no email after all
 four steps and stays without one.
 
 Two things broke on the way. QuickEnrich's direct account had 0 credits, so the step ran
-through treg instead. MailTester (my usual verifier) returned "Disabled Key" on every address,
-so verification moved to MillionVerifier. Both are noted rather than skipped silently.
+through treg instead. MailTester (my usual verifier) returned "Disabled Key" on every address
+and marked all 5 "unknown", so this run used DeBounce, with MillionVerifier as a second opinion.
+They agreed on all 5. Both problems are noted here rather than skipped.
 
 ## What reading the list taught me
 
