@@ -10,7 +10,7 @@ Notice: `evidence.py` sends live requests (DNS lookups and one homepage fetch) t
 - `dig`, the DNS lookup tool. It ships with macOS. Check with `command -v dig`; it should print `/usr/bin/dig`.
 - Network access.
 - One Python package, `curl_cffi`, installed below.
-- The input file `projects/03-tech-stack-segment/hand_check_3.csv`, already in the repo. It has three columns: `domain`, `pass` and `Tech Stack`. The values come from `hand_check_25.csv` (`pass` is `lite` or `deep`; `Tech Stack` is what the tool reported, called `techsight_said` there).
+- The input file `projects/03-tech-stack-segment/hand_check_3.csv`, already in the repo. Its header line is `domain,pass,Tech Stack`, so it has three columns: `domain`, `pass` and `Tech Stack`. The values come from `hand_check_25.csv` (`pass` is `lite` or `deep`; `Tech Stack` is what the tool reported, called `techsight_said` there).
 
 ## Steps
 
@@ -27,7 +27,9 @@ python scripts/markers.py hand_check_3.csv "${TMPDIR:-/tmp}/p3ev"
 cat "${TMPDIR:-/tmp}/p3ev/tenonhq.com.txt"
 ```
 
-`evidence.py` prints one line per domain: the domain, the HTTP status, and the length of the homepage HTML. It also writes `<domain>.txt` and `<domain>.html` into the evidence folder. Expect three lines with status 200 and a few seconds of run time. The last command prints the whole tenonhq.com evidence file. DNS returns the TXT lines in a varying order, and `dig` can drop a line, so the `linkedin-site-verification` line may be missing on one run. If it is, rerun the `evidence.py` line.
+`evidence.py` prints one line per domain: the domain, the HTTP status, and the length of the homepage HTML. It also writes `<domain>.txt` and `<domain>.html` into the evidence folder. Expect three lines with status 200 and a few seconds of run time. The `pip install` step may end with a notice that a new pip release is available. That is normal and safe to ignore. The last command prints the whole tenonhq.com evidence file. DNS returns the TXT lines in a varying order, and `dig` can drop a line, so the `linkedin-site-verification` line may be missing on one run. If it is, rerun the `evidence.py` line.
+
+The `markers.py` header line also shows an `html=` length, and for freestonecapital.com it was 45426 where `evidence.py` printed 45444. The cause is line endings. `evidence.py` prints the length of the page as fetched, which had 18 Windows-style `\r\n` line endings. `markers.py` reads the saved file back in text mode, which turns each `\r\n` into `\n`, so it counts 18 fewer characters. The other two pages have no `\r`, so their numbers match. A small difference like this is expected.
 
 `markers.py` prints, for each domain, the tool's answer (`techsight:`) and a list of vendor markers found in the evidence (`markers  :`). In `HubSpot[dns]`, `dns` means the marker is in the DNS records and `html4` means it appears 4 times in the homepage. `dns+html4` means both.
 
@@ -65,7 +67,7 @@ What does not count:
 - A verification record. It shows the company has an account with that vendor. It never proves an on-page product such as a tag or pixel. So `klaviyo-site-verification` supports "uses Klaviyo", but `linkedin-site-verification` does not support "LinkedIn Insight Tag", because that needs the tag on the page.
 - A `<name>.my.salesforce.com` login page that exists. It could belong to anyone with that name. For factory.ai it is the only evidence for Salesforce, so that row is unconfirmed.
 
-One thing does count even though it looks like a link: a help-center link to the vendor (for example `intercom.help`) counts as use of that vendor.
+One thing does count even though it looks like a link: a help-center link to the vendor counts as use of that vendor. Example from the 25-row check: posh.vip in `hand_check_25.csv` runs its help center on `intercom.help`, so Intercom counted as a missed tool.
 
 ## Worked example: tenonhq.com
 
@@ -75,14 +77,14 @@ How to get there from the printout:
 
 1. The tool listed two tools. Check each.
 2. HubSpot: the markers show `HubSpot[dns]`, and the SPF line in the `.txt` file includes `22753661.spf08.hubspotemail.net`. That is evidence. HubSpot is right. (The `go.` CNAME is a DNS record on a subdomain that this script does not collect; it is what the original check used.)
-3. LinkedIn Insight Tag: the `.txt` file has `linkedin-site-verification=...`, and the `markers.py` line has no `LinkedIn Insight` entry, because there is no `snap.licdn.com` in the page. A verification record does not prove a tag. You can confirm with `grep -c snap.licdn "${TMPDIR:-/tmp}/p3ev/tenonhq.com.html"`, which prints 0.
+3. LinkedIn Insight Tag: the `.txt` file has `linkedin-site-verification=...`, and the `markers.py` line has no `LinkedIn Insight` entry, because there is no `snap.licdn.com` in the page. A verification record does not prove a tag. You can confirm with `grep -c snap.licdn "${TMPDIR:-/tmp}/p3ev/tenonhq.com.html"`, which prints 0. `grep -c` exits with code 1 when the count is 0, so the shell may show a non-zero exit status here. That is the expected result, not an error.
 4. One listed tool is not there, so the verdict is wrong.
 
 Note the Pardot marker (`Pardot[html4]`) is page copy from the article, so it is not a missed tool.
 
 ## Try the other two
 
-- freestonecapital.com (expected verdict: missed). Salesforce shows in SPF, so it is right. The `HubSpot[html1]` marker comes from the HubSpot WordPress plugin loading `js-na2.hs-scripts.com`. The tool did not list HubSpot, so it missed one.
+- freestonecapital.com (expected verdict: missed). Salesforce shows in SPF, so it is right. The `HubSpot[html1]` marker comes from the HubSpot WordPress plugin loading `js-na2.hs-scripts.com`. The tool did not list HubSpot, so it missed one. The other listed tools are not scored. OneTrust (cookie consent), DocuSign (e-signature) and Dropbox (file storage) are outside the sales and marketing scope, and WordPress is a hosting tool, so none of them count for or against the tool.
 - factory.ai (expected verdict: unconfirmed). Salesforce appears nowhere in the markers. The only support is `factory.my.salesforce.com` existing, and a word like "factory" could be any company.
 - Next row to try on your own: coram.ai, which should score right (HubSpot from SPF). Copy its row from `hand_check_25.csv` into a new CSV with the same three columns (`techsight_said` becomes `Tech Stack`) and rerun the steps.
 
