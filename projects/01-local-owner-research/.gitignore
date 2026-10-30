@@ -1,0 +1,7 @@
+# Real people's names stay local: the answer key, raw agent runs and the sourcing pulls.
+ground-truth/
+runs/*.json
+runs/*-scores.md
+sourcing/*.csv
+sourcing/*.json
+__pycache__/

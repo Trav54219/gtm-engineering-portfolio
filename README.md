@@ -8,6 +8,7 @@ I work with Claude Code as the daily workspace. The copy is mine; the agent hand
 
 | Folder | What it shows |
 |---|---|
+| [`projects/01-local-owner-research/`](projects/01-local-owner-research) | A research process I can put a number on: find the owner of a local service business. Answers written first from the state registry, 3 tuning rounds, one holdout run. **Holdout 2 of 4 (50%), zero wrong names**; every large and mid business right, tiny ones honestly "not enough evidence". |
 | [`guards/`](guards) | The code that sits between me (or an agent) and a send. Pre-launch hooks, spend gates, copy gate, a kill-rule flag. Each one exists because something went wrong once. |
 | [`campaigns/scoreboard.md`](campaigns/scoreboard.md) | One row per campaign, rates computed on contacted leads, machine replies split out first. Includes 13 campaigns that returned 7 raw replies of 926 contacted, and what I concluded from that. |
 | [`lists/`](lists) | Two list builds written as recipes: sources, funnel counts at every stage, cost, and the traps I hit. |
