@@ -10,7 +10,7 @@ Software engineer at Fidelity first, then I started an outbound agency and ran i
 
 <p class="contact"><a href="mailto:HeurtelouTravis@gmail.com">HeurtelouTravis@gmail.com</a> · <a href="https://www.linkedin.com/in/travis-heurtelou/">LinkedIn</a> · <a href="https://github.com/Trav54219">GitHub</a></p>
 
-**Free tools:** [Domain health](https://trav54219.github.io/domain-health/) checks every sending domain's MX, SPF, DKIM, DMARC and age, with the exact DNS fix. [Lead name cleaner](https://trav54219.github.io/lead-name-cleaner/) cleans company and first names in a lead CSV and flags the rows that aren't safe to merge.
+**Free tools:** [Domain health](https://trav54219.github.io/domain-health/) checks every sending domain's MX, SPF, DKIM, DMARC and age, with the exact DNS fix. [Lead name cleaner](https://trav54219.github.io/lead-name-cleaner/) cleans company and first names in a lead CSV and flags the rows that aren't safe to merge. [Cold email checker](https://trav54219.github.io/cold-email-checker/) checks copy for spam phrases, AI tells and broken spintax, and converts spintax between Smartlead, Instantly and PlusVibe.
 
 ## Numbers I can show you how I got
 
