@@ -27,7 +27,7 @@ Five tools I built and host for cold email teams. They run in your browser, so n
 - **276 of 289** companies' tech stacks found with a free scanner, then 25 rows checked by hand: 13 right, 6 missed a tool, 2 wrong, 4 unconfirmed.
 - **4.33 to 4.67 out of 5:** a builder agent's work, re-scored after a second agent that never saw its notes found four gaps.
 - **0 wrong names** on a held-out test of an owner-research process (2 of 4 found; the other 2 honestly answered "not enough evidence").
-- **309 sending accounts** moved to new infrastructure after a blocklist listing, re-attached to 37 campaigns with no mismatches.
+- **309 sending accounts** moved to new infrastructure after a blocklist listing, re-attached to 37 campaigns with no mismatches. [What broke and what I changed](case-studies/deliverability-incident.md).
 
 ## Walkthrough
 
@@ -37,6 +37,8 @@ Two-minute screen recording of the tech-stack project: **not recorded yet.**
 
 | Project | One line | Status |
 |---|---|---|
+| [How I build outbound from scratch](case-studies/outbound-from-scratch.md) | The order I set up cold email in, from domains and warm-up to the list, verification, fit checks, a preflight gate and how I score results, with the rule each step came from. | write-up, from live campaigns |
+| [A blocklist listing across 309 inboxes](case-studies/deliverability-incident.md) | The shared relay behind every inbox landed on Spamhaus. I held launches, moved the fleet, re-attached 37 campaigns with 0 mismatches, then found the new relay listed too. What I check first now. | incident write-up |
 | [Client results](case-studies/client-results.md) | Every client engagement behind the resume numbers: $325K+ revenue across 4, 15 introductions across 3, and three Meta ad accounts. | finished, client results |
 | [How I chose the stack](case-studies/stack-decisions.md) | Why Convex, Whop, PlusVibe, treg, a cache on every paid call, two email checks and guards, and what each choice cost. | write-up |
 | [Job-post signal outbound](case-studies/job-signal-outbound.md) | Triggered outreach to hiring managers off open job posts for a UK recruitment agency: 22 placements in 55 days, lead conversion up 50%. | finished, client result |
