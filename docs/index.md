@@ -38,7 +38,7 @@ Two-minute screen recording of the tech-stack project: **not recorded yet.**
 | Project | One line | Status |
 |---|---|---|
 | [Client results](case-studies/client-results.md) | Every client engagement behind the resume numbers: $325K+ revenue across 4, 15 introductions across 3, and three Meta ad accounts. | finished, client results |
-| [How I chose the stack](case-studies/stack-decisions.md) | Why Convex, treg, a cache on every paid call, two email checks and guards, and what each choice cost. | write-up |
+| [How I chose the stack](case-studies/stack-decisions.md) | Why Convex, Whop, PlusVibe, treg, a cache on every paid call, two email checks and guards, and what each choice cost. | write-up |
 | [Job-post signal outbound](case-studies/job-signal-outbound.md) | Triggered outreach to hiring managers off open job posts for a UK recruitment agency: 22 placements in 55 days, lead conversion up 50%. | finished, client result |
 | [Signal to CRM, on a schedule](case-studies/signal-to-crm.md) | Every morning, new SDR and BDR job posts become scored, routed HubSpot accounts with a contact title and a drafted opener. First run: 18 accounts for 20 credits. | running daily |
 | [Second sequencer under a live system](case-studies/plusvibe-integration.md) | Added PlusVibe under a production portal that ran everything on Smartlead: 6 merged PRs, 123 tests, copy translation that refuses instead of guessing, no blind resends. | merged, switched off until the API key arrives |

@@ -25,13 +25,15 @@ What it cost:
 
 A merge to main deploys the frontend, and the build runs the whole test suite first (about 14,900 tests), so a failing test blocks the deploy. A page left open across a deploy reloads itself instead of throwing errors on the next click.
 
-## WorkOS for sign-in
+## Whop for payments and sign-in, WorkOS before it
 
-I didn't want to write authentication myself, so client sign-in runs on WorkOS AuthKit. The one rule I added on top: "couldn't reach the database" is never treated as "you don't have an account" or "your session expired." Both of those bugs logged real clients out before the rule and its test existed.
+Payments and sign-in run on Whop. I picked it because Whop gives me a dedicated account management team, so a billing or access problem goes to a named person instead of a support queue. The first version of the portal used WorkOS AuthKit for sign-in and Stripe for cards, and WorkOS is still switched on for one client account that signs in through it.
+
+The one rule I added on top of sign-in, whichever provider runs it: "couldn't reach the database" is never treated as "you don't have an account" or "your session expired." Both of those bugs logged real clients out before the rule and its test existed.
 
 ## A second sequencer added under a live one
 
-Every campaign ran on Smartlead. Adding PlusVibe meant changing code that live client campaigns depended on, so the integration shipped switched off: separate switches for reads and writes, copy translation that refuses to convert anything it can't convert exactly, and no automatic resends. [The write-up](plusvibe-integration.md) has the details and the 123 tests.
+Every campaign ran on Smartlead. I added PlusVibe because its pricing is better per email sent, which matters at fleet volume. Adding it meant changing code that live client campaigns depended on, so the integration shipped switched off: separate switches for reads and writes, copy translation that refuses to convert anything it can't convert exactly, and no automatic resends. [The write-up](plusvibe-integration.md) has the details and the 123 tests.
 
 ## treg for paid data
 
