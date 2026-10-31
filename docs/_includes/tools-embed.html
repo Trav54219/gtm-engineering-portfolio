@@ -1,0 +1,23 @@
+<div class="tools-embed" data-height="{{ include.height | default: 860 }}">
+  <div class="tools-tabs" role="tablist">
+    <button type="button" role="tab" data-src="https://trav54219.github.io/cold-email-checker/" data-repo="https://github.com/Trav54219/cold-email-checker" aria-selected="true">Cold email checker</button>
+    <button type="button" role="tab" data-src="https://trav54219.github.io/domain-health/?d=github.com" data-repo="https://github.com/Trav54219/domain-health" aria-selected="false">Domain health</button>
+    <button type="button" role="tab" data-src="https://trav54219.github.io/lead-name-cleaner/" data-repo="https://github.com/Trav54219/lead-name-cleaner" aria-selected="false">Lead name cleaner</button>
+    <button type="button" role="tab" data-src="https://trav54219.github.io/lead-list-scrubber/" data-repo="https://github.com/Trav54219/lead-list-scrubber" aria-selected="false">Lead list scrubber</button>
+  </div>
+  <iframe title="Cold email checker" loading="lazy" allow="clipboard-write" src="https://trav54219.github.io/cold-email-checker/"></iframe>
+  <p class="tools-links"><a class="open" href="https://trav54219.github.io/cold-email-checker/" target="_blank" rel="noopener">Open full screen</a> · <a class="repo" href="https://github.com/Trav54219/cold-email-checker">Source</a></p>
+</div>
+<script>
+  document.querySelectorAll(".tools-embed").forEach((box) => {
+    const frame = box.querySelector("iframe");
+    frame.style.height = box.dataset.height + "px";
+    box.querySelectorAll(".tools-tabs button").forEach((b) => b.addEventListener("click", () => {
+      box.querySelectorAll(".tools-tabs button").forEach((x) => x.setAttribute("aria-selected", String(x === b)));
+      frame.src = b.dataset.src;
+      frame.title = b.textContent;
+      box.querySelector(".open").href = b.dataset.src;
+      box.querySelector(".repo").href = b.dataset.repo;
+    }));
+  });
+</script>

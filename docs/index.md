@@ -10,7 +10,11 @@ Software engineer at Fidelity first, then I started an outbound agency and ran i
 
 <p class="contact"><a href="mailto:HeurtelouTravis@gmail.com">HeurtelouTravis@gmail.com</a> · <a href="https://www.linkedin.com/in/travis-heurtelou/">LinkedIn</a> · <a href="https://github.com/Trav54219">GitHub</a></p>
 
-**Free tools:** [Domain health](https://trav54219.github.io/domain-health/) checks every sending domain's MX, SPF, DKIM, DMARC and age, with the exact DNS fix. [Lead name cleaner](https://trav54219.github.io/lead-name-cleaner/) cleans company and first names in a lead CSV and flags the rows that aren't safe to merge. [Cold email checker](https://trav54219.github.io/cold-email-checker/) checks copy for spam phrases, AI tells and broken spintax, and converts spintax between Smartlead, Instantly and PlusVibe.
+## Free tools you can use right here
+
+Four tools I built and host for cold email teams. They run in your browser, so nothing leaves your computer. Try one below, or see them all on the [tools page](tools.md).
+
+{% include tools-embed.html height=820 %}
 
 ## Numbers I can show you how I got
 
@@ -42,8 +46,10 @@ Two-minute screen recording of the tech-stack project: **not recorded yet.**
 | [Tech stack segment](case-studies/tech-stack-segment.md) | Found the CRM behind 289 growing companies for free, checked 25 by hand, and split them into a HubSpot segment and a competitor segment. | finished |
 | [Agent loop that checks itself](case-studies/agent-loop.md) | One agent builds, a second grades it blind against a written rubric, and I approve the plan and the ship separately. | finished |
 | [Owner research process](https://github.com/Trav54219/gtm-engineering-portfolio/tree/main/projects/01-local-owner-research) | Finds the owner of a local service business, scored against answers I wrote down first. | finished, not yet approved for use: misses on tiny businesses |
+| [Warm leads list](https://github.com/Trav54219/gtm-engineering-portfolio/tree/main/projects/02-warm-leads-list) | A warm list from one competitor founder's LinkedIn audience: 169 items for $0.34, 27 ICP fits, 2 verified emails, $0.38 in total. | finished |
+| [Buyer language brief](https://github.com/Trav54219/gtm-engineering-portfolio/tree/main/projects/04-buyer-language-brief) | Commercial cleaning owners' own words from Reddit: 19 verbatim phrases, each checked against its source, and five copy lines. | finished |
+| [Free tools](tools.md) | Cold email checker, domain health, lead name cleaner and lead list scrubber, all live and embedded on this site. | live |
 
-Also built: a [warm leads list](https://github.com/Trav54219/gtm-engineering-portfolio/tree/main/projects/02-warm-leads-list) from one competitor's LinkedIn audience ($0.38, 2 verified emails) and a [buyer language brief](https://github.com/Trav54219/gtm-engineering-portfolio/tree/main/projects/04-buyer-language-brief) from Reddit (19 verbatim phrases, five sourced copy lines).
 
 ## How the pieces fit
 

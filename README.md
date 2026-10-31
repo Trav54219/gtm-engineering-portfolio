@@ -8,6 +8,9 @@ I run cold email outbound end to end: pick the niche, build the list, write the 
 - [Domain health](https://trav54219.github.io/domain-health/) checks MX, SPF, DKIM, DMARC and domain age for every sending domain at once and gives the exact fix. [Source](https://github.com/Trav54219/domain-health).
 - [Lead name cleaner](https://trav54219.github.io/lead-name-cleaner/) cleans the company and first-name columns of a lead CSV and flags every row that isn't safe to merge. [Source](https://github.com/Trav54219/lead-name-cleaner).
 - [Cold email checker](https://trav54219.github.io/cold-email-checker/) checks copy for spam phrases, AI tells and broken spintax, and converts spintax between Smartlead, Instantly and PlusVibe. [Source](https://github.com/Trav54219/cold-email-checker).
+- [Lead list scrubber](https://trav54219.github.io/lead-list-scrubber/) removes customers, past contacts, unsubscribes, duplicates and role addresses before upload, with a reason for every removed row. [Source](https://github.com/Trav54219/lead-list-scrubber).
+
+All four are embedded and usable on the [portfolio's tools page](https://trav54219.github.io/gtm-engineering-portfolio/tools).
 
 I work with Claude Code as the daily workspace. The copy is mine; the agent handles the scripted, checkable parts.
 
