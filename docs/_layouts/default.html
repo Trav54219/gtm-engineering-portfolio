@@ -3,6 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+{% comment %}The portfolio moved to breezygrowthco.com/travis (2026-10-31). Every page forwards there.{% endcomment %}
+{% assign slug = page.url | split: "/" | last | remove: ".html" %}
+{% if page.url contains "/case-studies/" %}{% assign moved = "https://www.breezygrowthco.com/travis/" | append: slug %}{% elsif page.url contains "tools" %}{% assign moved = "https://www.breezygrowthco.com/travis#tools" %}{% else %}{% assign moved = "https://www.breezygrowthco.com/travis" %}{% endif %}
+<link rel="canonical" href="{{ moved }}">
+<meta http-equiv="refresh" content="0; url={{ moved }}">
+<script>location.replace("{{ moved }}" + ("{{ moved }}".includes("#") ? "" : location.hash));</script>
 <title>{% if page.title %}{{ page.title }} | {% endif %}Travis Heurtelou, GTM engineer</title>
 <style>
   body { font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; color: #1f2328; max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; }

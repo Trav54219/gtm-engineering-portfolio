@@ -2,7 +2,7 @@
 
 I run cold email outbound end to end: pick the niche, build the list, write the copy, stand up the sending infrastructure, launch, and read the results. This repo is the working evidence: the guards that stop me sending something wrong, the lists and how I built them, the incidents and what I did, and the scoreboard with the numbers as they are, including the ones that didn't work.
 
-**Portfolio site with the case studies:** https://trav54219.github.io/gtm-engineering-portfolio/
+**Portfolio site with the case studies:** https://www.breezygrowthco.com/travis
 
 **Free tools I built and host:**
 - [Domain health](https://trav54219.github.io/domain-health/) checks MX, SPF, DKIM, DMARC and domain age for every sending domain at once and gives the exact fix. [Source](https://github.com/Trav54219/domain-health).
@@ -11,7 +11,7 @@ I run cold email outbound end to end: pick the niche, build the list, write the 
 - [Lead list scrubber](https://trav54219.github.io/lead-list-scrubber/) removes customers, past contacts, unsubscribes, duplicates and role addresses before upload, with a reason for every removed row. [Source](https://github.com/Trav54219/lead-list-scrubber).
 - [Reply rate checker](https://trav54219.github.io/reply-rate-checker/) takes machine replies out, puts rates on contacted leads, and says whether an A/B winner is real (Fisher's exact test). [Source](https://github.com/Trav54219/reply-rate-checker).
 
-All five are embedded and usable on the [portfolio's tools page](https://trav54219.github.io/gtm-engineering-portfolio/tools).
+All five are embedded and usable on the [portfolio's tools section](https://www.breezygrowthco.com/travis#tools).
 
 I work with Claude Code as the daily workspace. The copy is mine; the agent handles the scripted, checkable parts.
 
