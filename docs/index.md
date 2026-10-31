@@ -12,7 +12,7 @@ Software engineer at Fidelity first, then I started an outbound agency and ran i
 
 ## Free tools you can use right here
 
-Four tools I built and host for cold email teams. They run in your browser, so nothing leaves your computer. Try one below, or see them all on the [tools page](tools.md).
+Five tools I built and host for cold email teams. They run in your browser, so nothing leaves your computer. Try one below, or see them all on the [tools page](tools.md).
 
 {% include tools-embed.html height=820 %}
 
@@ -48,7 +48,7 @@ Two-minute screen recording of the tech-stack project: **not recorded yet.**
 | [Owner research process](https://github.com/Trav54219/gtm-engineering-portfolio/tree/main/projects/01-local-owner-research) | Finds the owner of a local service business, scored against answers I wrote down first. | finished, not yet approved for use: misses on tiny businesses |
 | [Warm leads list](https://github.com/Trav54219/gtm-engineering-portfolio/tree/main/projects/02-warm-leads-list) | A warm list from one competitor founder's LinkedIn audience: 169 items for $0.34, 27 ICP fits, 2 verified emails, $0.38 in total. | finished |
 | [Buyer language brief](https://github.com/Trav54219/gtm-engineering-portfolio/tree/main/projects/04-buyer-language-brief) | Commercial cleaning owners' own words from Reddit: 19 verbatim phrases, each checked against its source, and five copy lines. | finished |
-| [Free tools](tools.md) | Cold email checker, domain health, lead name cleaner and lead list scrubber, all live and embedded on this site. | live |
+| [Free tools](tools.md) | Cold email checker, domain health, lead name cleaner, lead list scrubber and reply rate checker, all live and embedded on this site. | live |
 
 
 ## How the pieces fit
