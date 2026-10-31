@@ -1,0 +1,214 @@
+{
+ "run": "2026-10-31-1246",
+ "applied": true,
+ "jobs_paid_for": 20,
+ "companies": 18,
+ "created": 18,
+ "updated": 0,
+ "contacts_attached": 1,
+ "routes": {
+  "AE Mid-market": 5,
+  "SDR": 7,
+  "Nurture": 6
+ },
+ "accounts": [
+  {
+   "company": "Westcor Global (formerly Ard\u00e1n)",
+   "domain": "westcorglobal.com",
+   "employees": 49,
+   "job": "Title Insurance Business Development Representative - Agent Home",
+   "posted": "2026-10-30",
+   "score": 75,
+   "route": "SDR",
+   "contact_target": "Head of Sales or VP Sales",
+   "reason": "49 employees +30, 11 jobs posted in 30 days +25, no outbound tools seen +20"
+  },
+  {
+   "company": "Vinson",
+   "domain": "vinsonedu.com",
+   "employees": 66,
+   "job": "Business Development Representative",
+   "posted": "2026-10-31",
+   "score": 65,
+   "route": "AE Mid-market",
+   "contact_target": "Head of Sales or VP Sales",
+   "reason": "66 employees +30, 4 jobs posted in 30 days +15, no outbound tools seen +20"
+  },
+  {
+   "company": "CarsDirect.com",
+   "domain": "carsdirect.com",
+   "employees": 100,
+   "job": "Business Development Representative",
+   "posted": "2026-10-31",
+   "score": 65,
+   "route": "AE Mid-market",
+   "contact_target": "VP Sales, then Sales Development Manager",
+   "reason": "100 employees +30, 9 jobs posted in 30 days +15, no outbound tools seen +20"
+  },
+  {
+   "company": "Protocall Communications",
+   "domain": "protocallenergy.net",
+   "employees": 25,
+   "job": "Business Development Representative",
+   "posted": "2026-10-30",
+   "score": 65,
+   "route": "SDR",
+   "contact_target": "Founder or CEO",
+   "reason": "25 employees +30, 4 jobs posted in 30 days +15, no outbound tools seen +20"
+  },
+  {
+   "company": "Comfort Wave",
+   "domain": "comfortwave.com",
+   "employees": 14,
+   "job": "Business Development Representative - Midwest City (full time)",
+   "posted": "2026-10-31",
+   "score": 60,
+   "route": "SDR",
+   "contact_target": "Founder or CEO",
+   "reason": "14 employees +15, 12 jobs posted in 30 days +25, no outbound tools seen +20"
+  },
+  {
+   "company": "Givzey",
+   "domain": "givzey.com",
+   "employees": 65,
+   "job": "Version2.ai Business Development Representative",
+   "posted": "2026-10-30",
+   "score": 55,
+   "route": "AE Mid-market",
+   "contact_target": "Head of Sales or VP Sales",
+   "reason": "65 employees +30, 8 jobs posted in 30 days +15, already pays for outreach/salesloft +10"
+  },
+  {
+   "company": "Click Theory Capital",
+   "domain": "clicktheorycapital.com",
+   "employees": 31,
+   "job": "Sales Development Representative",
+   "posted": "2026-10-30",
+   "score": 55,
+   "route": "SDR",
+   "contact_target": "Head of Sales or VP Sales",
+   "reason": "31 employees +30, 1 jobs posted in 30 days +5, no outbound tools seen +20"
+  },
+  {
+   "company": "ProsperOps",
+   "domain": "prosperops.com",
+   "employees": 128,
+   "job": "Sales Development Representative",
+   "posted": "2026-10-30",
+   "score": 50,
+   "route": "AE Mid-market",
+   "contact_target": "VP Sales, then Sales Development Manager",
+   "reason": "128 employees +15, 14 jobs posted in 30 days +25, already pays for apollo-io/zoominfo +10"
+  },
+  {
+   "company": "Sebright Products, Inc.",
+   "domain": "sebrightproducts.com",
+   "employees": 68,
+   "job": "Sales Representative / Business Development, Baler Product Line",
+   "posted": "2026-10-30",
+   "score": 45,
+   "route": "AE Mid-market",
+   "contact_target": "Head of Sales or VP Sales",
+   "reason": "68 employees +30, 1 jobs posted in 30 days +5, already pays for zoominfo +10"
+  },
+  {
+   "company": "Raptor Technologies",
+   "domain": "raptorware.com",
+   "employees": 11,
+   "job": "Sales Development Representative",
+   "posted": "2026-10-30",
+   "score": 40,
+   "route": "SDR",
+   "contact_target": "Founder or CEO",
+   "reason": "11 employees +15, 3 jobs posted in 30 days +15, already pays for outreach +10"
+  },
+  {
+   "company": "Rochford Supply",
+   "domain": "rochfordsupply.com",
+   "employees": 15,
+   "job": "Sales Development Representative",
+   "posted": "2026-10-30",
+   "score": 40,
+   "route": "SDR",
+   "contact_target": "Founder or CEO",
+   "reason": "15 employees +15, 2 jobs posted in 30 days +5, no outbound tools seen +20"
+  },
+  {
+   "company": "Bedrock Truck Beds",
+   "domain": "bedrocktruckbeds.com",
+   "employees": 18,
+   "job": "Commercial Business Development Representative",
+   "posted": "2026-10-30",
+   "score": 40,
+   "route": "SDR",
+   "contact_target": "Founder or CEO",
+   "reason": "18 employees +15, 2 jobs posted in 30 days +5, no outbound tools seen +20"
+  },
+  {
+   "company": "JMARK - IT Support and IT Services",
+   "domain": "jmark.com",
+   "employees": 135,
+   "job": "Business Development Representative - Evergreen",
+   "posted": "2026-10-31",
+   "score": 15,
+   "route": "Nurture",
+   "contact_target": "VP Sales, then Sales Development Manager",
+   "reason": "135 employees +15, 10 jobs posted in 30 days +25, 2 SDR/BDR posts at once +15, no outbound tools seen +20, IT Services and IT Consulting: excluded -60"
+  },
+  {
+   "company": "HiveWatch",
+   "domain": "hivewatch.com",
+   "employees": 101,
+   "job": "Business Development Representative",
+   "posted": "2026-10-31",
+   "score": 0,
+   "route": "Nurture",
+   "contact_target": "VP Sales, then Sales Development Manager",
+   "reason": "101 employees +15, 10 jobs posted in 30 days +25, already pays for apollo-io/outreach/salesloft/zoominfo +10, Software Development: excluded -60"
+  },
+  {
+   "company": "Ford Office Technologies",
+   "domain": "fordtech.com",
+   "employees": 123,
+   "job": "Account Development Representative / Inside Sales",
+   "posted": "2026-10-31",
+   "score": 0,
+   "route": "Nurture",
+   "contact_target": "VP Sales, then Sales Development Manager",
+   "reason": "123 employees +15, 13 jobs posted in 30 days +25, no outbound tools seen +20, IT Services and IT Consulting: excluded -60"
+  },
+  {
+   "company": "COMDOC",
+   "domain": "ecomdoc.com",
+   "employees": 11,
+   "job": "Business Development Representative",
+   "posted": "2026-10-30",
+   "score": 0,
+   "route": "Nurture",
+   "contact_target": "Founder or CEO",
+   "reason": "11 employees +15, 1 jobs posted in 30 days +5, no outbound tools seen +20, IT Services and IT Consulting: excluded -60"
+  },
+  {
+   "company": "SewerAI",
+   "domain": "sewerai.com",
+   "employees": 115,
+   "job": "Sales Development Representative",
+   "posted": "2026-10-30",
+   "score": 0,
+   "route": "Nurture",
+   "contact_target": "VP Sales, then Sales Development Manager",
+   "reason": "115 employees +15, 9 jobs posted in 30 days +15, already pays for outreach/zoominfo +10, Software Development: excluded -60"
+  },
+  {
+   "company": "Panoptyc",
+   "domain": "panoptyc.com",
+   "employees": 157,
+   "job": "Business Development Representative",
+   "posted": "2026-10-30",
+   "score": 0,
+   "route": "Nurture",
+   "contact_target": "VP Sales, then Sales Development Manager",
+   "reason": "157 employees +15, 3 jobs posted in 30 days +15, 2 SDR/BDR posts at once +15, already pays for apollo-io/outreach/salesloft/smartlead/zoominfo +10, IT Services and IT Consulting: excluded -60"
+  }
+ ]
+}

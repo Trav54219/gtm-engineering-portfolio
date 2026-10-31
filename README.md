@@ -2,6 +2,8 @@
 
 I run cold email outbound end to end: pick the niche, build the list, write the copy, stand up the sending infrastructure, launch, and read the results. This repo is the working evidence: the guards that stop me sending something wrong, the lists and how I built them, the incidents and what I did, and the scoreboard with the numbers as they are, including the ones that didn't work.
 
+**Portfolio site with the case studies:** https://trav54219.github.io/gtm-engineering-portfolio/
+
 I work with Claude Code as the daily workspace. The copy is mine; the agent handles the scripted, checkable parts.
 
 ## What's here
@@ -13,6 +15,9 @@ I work with Claude Code as the daily workspace. The copy is mine; the agent hand
 | [`projects/03-tech-stack-segment/`](projects/03-tech-stack-segment) | 289 companies hiring GTM roles this month, scanned free for their stack: 276 found (95.5%), a 25-row hand check (13 right, 6 missed, 2 wrong, 4 unconfirmed), HubSpot segment 121, Salesforce/Zoho segment 30. Found three fingerprint bugs and stopped a paid lookup after 10 rows returned nothing. $0.09. |
 | [`projects/04-buyer-language-brief/`](projects/04-buyer-language-brief) | Commercial cleaning owners' own words from Reddit: 51 threads scanned, 8 read in full inside a 90-day window, 19 verbatim phrases (each checked against the source by script) and five copy lines, each linked and dated. Reddit blocked direct requests, so the same two-pass method ran through a paid endpoint. About $0.06. |
 | [`projects/05-agent-loop/`](projects/05-agent-loop) | One task built by an agent and graded by a second agent that never saw the builder's notes: cycle 1 4.33/5, cycle 2 4.67/5 after fixing what the checker caught. Plan and ship approved separately; [PR #1](https://github.com/Trav54219/gtm-engineering-portfolio/pull/1) opened, not merged by the loop. |
+| [`projects/06-crm-cleanup/`](projects/06-crm-cleanup) | A messy HubSpot CRM (98 companies, 316 contacts, duplicates, orphans, broken names, 6 same-name decoys) seeded with an answer key, then cleaned: **48 merges, 48 right, 0 wrong**, 286 contacts scored with the reason written beside the score, and routed. A second run is a no-op. |
+| [`projects/07-signal-to-crm/`](projects/07-signal-to-crm) | Runs every morning: new SDR/BDR job posts from TheirStack become HubSpot accounts with a score, reason, route, contact title and drafted opener. First run 20 jobs to 18 accounts for 20 credits; job ids already seen are never paid for again. |
+| [`docs/case-studies/job-signal-outbound.md`](docs/case-studies/job-signal-outbound.md) | Client result: outreach triggered by open job posts for a UK recruitment agency. **22 placements in 55 days**, lead conversion up 50%, replies handled in hours instead of days. |
 | [`guards/`](guards) | The code that sits between me (or an agent) and a send. Pre-launch hooks, spend gates, copy gate, a kill-rule flag. Each one exists because something went wrong once. |
 | [`campaigns/scoreboard.md`](campaigns/scoreboard.md) | One row per campaign, rates computed on contacted leads, machine replies split out first. Includes 13 campaigns that returned 7 raw replies of 926 contacted, and what I concluded from that. |
 | [`lists/`](lists) | Two list builds written as recipes: sources, funnel counts at every stage, cost, and the traps I hit. |
@@ -26,6 +31,7 @@ I work with Claude Code as the daily workspace. The copy is mine; the agent hand
 | --- | --- |
 | Sending, sequences, inbox replies | Smartlead (API and MCP) |
 | Company and people data | Blitz, MoltSets, TheirStack (hiring signals), Apify (Maps) |
+| CRM | HubSpot (CRM API: batch, merge, associations, custom properties) |
 | Priced data calls and enrichment | treg, with a price sweep before any paid call (`skills/treg-price-sweep`) |
 | Web reads and research | TinyFish |
 | Daily workspace, scripts and guards | Claude Code, Python |
@@ -58,4 +64,4 @@ Why it is built this way: it opens on something true about them, asks one questi
 
 ## Not in this repo
 
-Client names, lead data, API keys, prospect emails, inbox and domain lists, pricing and anything from paid courses. The private repos stay private.
+Client names (except case studies the client approved), lead data, API keys, prospect emails, inbox and domain lists, pricing and anything from paid courses. The private repos stay private.

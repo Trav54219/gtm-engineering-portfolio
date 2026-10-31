@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.travis.gtm-signal-to-crm</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/travis/.venvs/default/bin/python3</string>
+    <string>/Users/travis/gtm-engineering-portfolio/projects/07-signal-to-crm/run.py</string>
+    <string>--apply</string>
+    <string>--limit</string>
+    <string>15</string>
+  </array>
+  <key>StartCalendarInterval</key>
+  <dict><key>Hour</key><integer>8</integer><key>Minute</key><integer>30</integer></dict>
+  <key>StandardOutPath</key><string>/Users/travis/Library/Logs/gtm-signal-to-crm.log</string>
+  <key>StandardErrorPath</key><string>/Users/travis/Library/Logs/gtm-signal-to-crm.log</string>
+</dict>
+</plist>
