@@ -6,7 +6,7 @@ layout: default
 
 Software engineer at Fidelity first, then I started an outbound agency and ran it end to end.
 
-**What I want:** a GTM engineer role, full-time or contract, remote (US).
+**What I want:** a GTM engineer role, full-time or contract, in New York (hybrid or on-site) or remote in the US.
 
 <p class="contact"><a href="mailto:HeurtelouTravis@gmail.com">HeurtelouTravis@gmail.com</a> · <a href="https://www.linkedin.com/in/travis-heurtelou/">LinkedIn</a> · <a href="https://github.com/Trav54219">GitHub</a></p>
 
@@ -14,6 +14,8 @@ Software engineer at Fidelity first, then I started an outbound agency and ran i
 
 ## Numbers I can show you how I got
 
+- **$325K+ in client revenue** across 4 lead generation engagements, and **15 introductions** across 3 introduction engagements. [Every client, figure and time window](case-studies/client-results.md).
+- **$506,790 in revenue on $101,540 of Meta spend (4.99 ROAS)** in 30 days for a coaching offer, plus two more ad accounts. [The table](case-studies/client-results.md#paid-ads-meta-into-vsl-and-webinar-funnels).
 - **22 placements in 55 days** for a UK recruitment agency, from outreach triggered by open job posts. Lead conversion rose 50% over their manual process.
 - **48 of 48 merges right** in a HubSpot cleanup graded against an answer key, including 6 same-name decoys left unmerged. 286 contacts scored and routed.
 - **18 accounts from 20 job posts**, scored, routed and drafted in HubSpot by a play that runs every morning without me. Software companies the seller excludes scored 0.
@@ -31,6 +33,8 @@ Two-minute screen recording of the tech-stack project: **not recorded yet.**
 
 | Project | One line | Status |
 |---|---|---|
+| [Client results](case-studies/client-results.md) | Every client engagement behind the resume numbers: $325K+ revenue across 4, 15 introductions across 3, and three Meta ad accounts. | finished, client results |
+| [How I chose the stack](case-studies/stack-decisions.md) | Why Convex, treg, a cache on every paid call, two email checks and guards, and what each choice cost. | write-up |
 | [Job-post signal outbound](case-studies/job-signal-outbound.md) | Triggered outreach to hiring managers off open job posts for a UK recruitment agency: 22 placements in 55 days, lead conversion up 50%. | finished, client result |
 | [Signal to CRM, on a schedule](case-studies/signal-to-crm.md) | Every morning, new SDR and BDR job posts become scored, routed HubSpot accounts with a contact title and a drafted opener. First run: 18 accounts for 20 credits. | running daily |
 | [Second sequencer under a live system](case-studies/plusvibe-integration.md) | Added PlusVibe under a production portal that ran everything on Smartlead: 6 merged PRs, 123 tests, copy translation that refuses instead of guessing, no blind resends. | merged, switched off until the API key arrives |
@@ -77,12 +81,13 @@ flowchart LR
 
 ## Tools I've built with
 
-Python, Claude Code (agents, skills, hooks), HubSpot CRM API, Smartlead API, treg, Apify, TheirStack, techsight-cli, reddit-find, OpenAI API, MillionVerifier, DeBounce, Next.js, Convex, TypeScript, Vitest, PlusVibe API, git and GitHub.
+Python, Claude Code (agents, skills, hooks), HubSpot CRM API, Smartlead API, Clay API, n8n, Blitz, treg, Apify, TheirStack, techsight-cli, reddit-find, OpenAI API, MillionVerifier, DeBounce, Next.js, Convex, TypeScript, Vitest, PlusVibe API, git and GitHub.
 
 ## Career
 
 **Breezy Growth, GTM engineer and founder** (Sep 2024 to now, remote)
 - Run outbound end to end: niche, list, verification, copy and a sending fleet of 225 inboxes on 75 domains.
+- Client results: $325K+ revenue across 4 engagements and 15 introductions across 3. [The table](case-studies/client-results.md).
 - Wrote 9 pre-send guard scripts that block a launch, a lead add or a spend when something is wrong. [The code](https://github.com/Trav54219/gtm-engineering-portfolio/tree/main/guards).
 - Led the recovery when the fleet's shared domain hit a blocklist: 309 accounts replaced, 37 campaigns re-attached. [The write-up](https://github.com/Trav54219/gtm-engineering-portfolio/blob/main/deliverability/incident-blacklisted-main-domain.md).
 - Keep a public scoreboard with the bad numbers too: 13 campaigns, 926 contacted, 7 raw replies. [The scoreboard](https://github.com/Trav54219/gtm-engineering-portfolio/blob/main/campaigns/scoreboard.md).
