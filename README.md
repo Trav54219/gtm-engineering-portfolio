@@ -4,6 +4,8 @@ I run cold email outbound end to end: pick the niche, build the list, write the 
 
 **Portfolio site with the case studies:** https://trav54219.github.io/gtm-engineering-portfolio/
 
+**Free tool I built and host:** [Domain health](https://trav54219.github.io/domain-health/), which checks MX, SPF, DKIM, DMARC and domain age for every sending domain at once and gives the exact fix. [Source](https://github.com/Trav54219/domain-health).
+
 I work with Claude Code as the daily workspace. The copy is mine; the agent handles the scripted, checkable parts.
 
 ## What's here

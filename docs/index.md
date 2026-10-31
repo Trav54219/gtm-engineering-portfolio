@@ -10,6 +10,8 @@ Software engineer at Fidelity first, then I started an outbound agency and ran i
 
 <p class="contact"><a href="mailto:HeurtelouTravis@gmail.com">HeurtelouTravis@gmail.com</a> · <a href="https://www.linkedin.com/in/travis-heurtelou/">LinkedIn</a> · <a href="https://github.com/Trav54219">GitHub</a></p>
 
+**Free tool:** [Domain health](https://trav54219.github.io/domain-health/). Paste your sending domains and get MX, SPF, DKIM, DMARC and domain age for all of them, with the exact DNS record to add when one fails.
+
 ## Numbers I can show you how I got
 
 - **22 placements in 55 days** for a UK recruitment agency, from outreach triggered by open job posts. Lead conversion rose 50% over their manual process.
