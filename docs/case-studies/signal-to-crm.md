@@ -38,4 +38,4 @@ flowchart LR
 
 **What I'd do with more time:** add the people lookup as a cheapest-first waterfall, then push the top-scored accounts into a sequencer as drafts for a rep to approve.
 
-**Try it:** [the project](https://github.com/Trav54219/gtm-engineering-portfolio/tree/main/projects/07-signal-to-crm), with the first run's 18 accounts in `runs/`.
+**Try it:** [the repo](https://github.com/Trav54219/signal-to-crm) or [the project](https://github.com/Trav54219/gtm-engineering-portfolio/tree/main/projects/07-signal-to-crm), with the first run's 18 accounts in `runs/`.

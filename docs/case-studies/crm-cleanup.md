@@ -48,4 +48,4 @@ flowchart LR
 
 **What I'd do with more time:** fit the score weights to closed-won deals instead of my own judgment, and map each route to a round-robin list of owners.
 
-**Try it:** [the project](https://github.com/Trav54219/gtm-engineering-portfolio/tree/main/projects/06-crm-cleanup). Six commands rebuild the mess, clean it and grade it in a free HubSpot account.
+**Try it:** [the repo](https://github.com/Trav54219/hubspot-crm-cleanup) or [the project](https://github.com/Trav54219/gtm-engineering-portfolio/tree/main/projects/06-crm-cleanup). Six commands rebuild the mess, clean it and grade it in a free HubSpot account.
