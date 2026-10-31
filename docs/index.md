@@ -10,7 +10,7 @@ Software engineer at Fidelity first, then I started an outbound agency and ran i
 
 <p class="contact"><a href="mailto:HeurtelouTravis@gmail.com">HeurtelouTravis@gmail.com</a> · <a href="https://www.linkedin.com/in/travis-heurtelou/">LinkedIn</a> · <a href="https://github.com/Trav54219">GitHub</a></p>
 
-**Free tool:** [Domain health](https://trav54219.github.io/domain-health/). Paste your sending domains and get MX, SPF, DKIM, DMARC and domain age for all of them, with the exact DNS record to add when one fails.
+**Free tools:** [Domain health](https://trav54219.github.io/domain-health/) checks every sending domain's MX, SPF, DKIM, DMARC and age, with the exact DNS fix. [Lead name cleaner](https://trav54219.github.io/lead-name-cleaner/) cleans company and first names in a lead CSV and flags the rows that aren't safe to merge.
 
 ## Numbers I can show you how I got
 

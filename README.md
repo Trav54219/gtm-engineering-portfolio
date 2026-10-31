@@ -4,7 +4,9 @@ I run cold email outbound end to end: pick the niche, build the list, write the 
 
 **Portfolio site with the case studies:** https://trav54219.github.io/gtm-engineering-portfolio/
 
-**Free tool I built and host:** [Domain health](https://trav54219.github.io/domain-health/), which checks MX, SPF, DKIM, DMARC and domain age for every sending domain at once and gives the exact fix. [Source](https://github.com/Trav54219/domain-health).
+**Free tools I built and host:**
+- [Domain health](https://trav54219.github.io/domain-health/) checks MX, SPF, DKIM, DMARC and domain age for every sending domain at once and gives the exact fix. [Source](https://github.com/Trav54219/domain-health).
+- [Lead name cleaner](https://trav54219.github.io/lead-name-cleaner/) cleans the company and first-name columns of a lead CSV and flags every row that isn't safe to merge. [Source](https://github.com/Trav54219/lead-name-cleaner).
 
 I work with Claude Code as the daily workspace. The copy is mine; the agent handles the scripted, checkable parts.
 
