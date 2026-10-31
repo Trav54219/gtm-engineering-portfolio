@@ -12,6 +12,7 @@ Software engineer at Fidelity first, then I started an outbound agency and ran i
 
 ## Numbers I can show you how I got
 
+- **22 placements in 55 days** for a UK recruitment agency, from outreach triggered by open job posts. Lead conversion rose 50% over their manual process.
 - **276 of 289** companies' tech stacks found with a free scanner, then 25 rows checked by hand: 13 right, 6 missed a tool, 2 wrong, 4 unconfirmed.
 - **4.33 to 4.67 out of 5:** a builder agent's work, re-scored after a second agent that never saw its notes found four gaps.
 - **0 wrong names** on a held-out test of an owner-research process (2 of 4 found; the other 2 honestly answered "not enough evidence").
@@ -25,6 +26,7 @@ Two-minute screen recording of the tech-stack project: **not recorded yet.**
 
 | Project | One line | Status |
 |---|---|---|
+| [Job-post signal outbound](case-studies/job-signal-outbound.md) | Triggered outreach to hiring managers off open job posts for a UK recruitment agency: 22 placements in 55 days, lead conversion up 50%. | finished, client result |
 | [Tech stack segment](case-studies/tech-stack-segment.md) | Found the CRM behind 289 growing companies for free, checked 25 by hand, and split them into a HubSpot segment and a competitor segment. | finished |
 | [Agent loop that checks itself](case-studies/agent-loop.md) | One agent builds, a second grades it blind against a written rubric, and I approve the plan and the ship separately. | finished |
 | [Owner research process](https://github.com/Trav54219/gtm-engineering-portfolio/tree/main/projects/01-local-owner-research) | Finds the owner of a local service business, scored against answers I wrote down first. | finished, not yet approved for use: misses on tiny businesses |
