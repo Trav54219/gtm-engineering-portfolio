@@ -1,0 +1,20 @@
+{
+ "label": "after",
+ "company records": 80,
+ "companies with a duplicate record": 0,
+ "contact records": 286,
+ "people with a duplicate record": 0,
+ "work-email contacts with no company": 0,
+ "contacts with no company": 8,
+ "names in all caps or all lowercase": 0,
+ "contacts with no fit score": 0,
+ "routes": {
+  "AE Mid-market": 101,
+  "SDR": 154,
+  "Nurture": 21,
+  "AE Enterprise": 10
+ },
+ "merges right": 48,
+ "merges wrong": 0,
+ "wrong merges": []
+}

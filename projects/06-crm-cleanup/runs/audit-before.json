@@ -1,0 +1,14 @@
+{
+ "label": "before",
+ "company records": 98,
+ "companies with a duplicate record": 18,
+ "contact records": 316,
+ "people with a duplicate record": 30,
+ "work-email contacts with no company": 0,
+ "contacts with no company": 40,
+ "names in all caps or all lowercase": 86,
+ "contacts with no fit score": 316,
+ "routes": {
+  "none": 316
+ }
+}
