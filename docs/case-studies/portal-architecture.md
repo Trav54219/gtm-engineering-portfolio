@@ -129,8 +129,8 @@ Every key lives in the Convex production environment, never in the browser or th
 | <img class="api-logo" src="/logos/portal/slack.png" alt=""> Slack | Ops alerts by webhook. A bot creates each client's channel, sends the Slack Connect invite and posts booked calls. | Clients and staff already live in Slack. |
 | <img class="api-logo" src="/logos/portal/linear.png" alt=""> Linear | When a contract is signed, a project for that client is created with the fulfillment checklist. | Onboarding starts as a ready queue, not something to remember. |
 | <img class="api-logo" src="/logos/portal/resend.png" alt=""> Resend | Transactional email to clients, such as a broken-calendar alert with a reconnect link. | Kept off the cold-email fleet, so client notices don't land in spam. |
-| <span class="api-logo"></span> Photon | iMessage alerts to reps on speed-to-lead hand-offs, opt-in per rep. | A text gets seen faster than an email. |
-| <span class="api-logo"></span> Web Push | Browser notifications per device for client users. | Hot replies reach a client without the tab open. |
+| <img class="api-logo" src="/logos/portal/photon.png" alt=""> Photon | iMessage alerts to reps on speed-to-lead hand-offs, opt-in per rep. | A text gets seen faster than an email. |
+| <img class="api-logo" src="/logos/portal/webpush.svg" alt=""> Web Push | Browser notifications per device for client users. | Hot replies reach a client without the tab open. |
 | <img class="api-logo" src="/logos/portal/sentry.png" alt=""> Sentry | Error reporting from the frontend. | A deploy that catches an open tab reloads quietly and isn't counted as an error. |
 
 ## The lead build, step by step
