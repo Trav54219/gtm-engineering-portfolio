@@ -5,7 +5,7 @@ title: How I build outbound from scratch
 
 # How I build outbound from scratch
 
-This is the whole cold email system I run for my agency and its clients, in the order I build it: sending infrastructure, warm-up, the list, verification, a fit check on every lead, the copy, the launch gates, replies and how I judge a campaign. Each step has a rule, and most rules exist because something went wrong once. Every number on this page comes from those campaigns.
+This is the whole cold email system I run at Breezy Growth for its clients, in the order I build it: sending infrastructure, warm-up, the list, verification, a fit check on every lead, the copy, the launch gates, replies and how I judge a campaign. Each step has a rule, and most rules exist because something went wrong once. Every number on this page comes from those campaigns.
 
 <p class="stack-logos">
 <img src="https://www.breezygrowthco.com/logos/stack/smartlead.png" alt="Smartlead" title="Smartlead">
