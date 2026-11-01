@@ -84,7 +84,7 @@ Every key lives in the Convex production environment, never in the browser or th
 | <img class="api-logo" src="/logos/portal/deepinfra.png" alt=""> DeepInfra | Default for high-volume work: reply classification and the qualified-lead gate. | Cheap and called constantly. |
 | <img class="api-logo" src="/logos/portal/openrouter.png" alt=""> OpenRouter | First choice for copy and introductions. Each call is tagged with the app, so spend can be traced. | The best model for the output that matters most. |
 | <img class="api-logo" src="/logos/portal/openai.png" alt=""> OpenAI | Direct model access in the router. | A third provider behind the same interface. |
-| <span class="api-logo"></span> TypeSafe | A decision model: typed questions in, one typed answer each. | Yes/no and category calls shouldn't be parsed out of free text. |
+| <img class="api-logo" src="/logos/portal/typesafe.png" alt=""> TypeSafe | A decision model: typed questions in, one typed answer each. | Yes/no and category calls shouldn't be parsed out of free text. |
 | <img class="api-logo" src="/logos/portal/anthropic.png" alt=""> Anthropic<br><img class="api-logo" src="/logos/portal/openai.png" alt=""> OpenAI<br><img class="api-logo" src="/logos/portal/openrouter.png" alt=""> OpenRouter<br><img class="api-logo" src="/logos/portal/deepinfra.png" alt=""> DeepInfra<br>(billing APIs) | Read-only spend sync into the AI cost dashboard. | Cost per client and per feature, not one monthly total. |
 
 ### Money, contracts and sign-in
@@ -93,7 +93,7 @@ Every key lives in the Convex production environment, never in the browser or th
 |---|---|---|
 | <img class="api-logo" src="/logos/portal/whop.png" alt=""> Whop | Payments, invoices, memberships and sign-in, plus 2 webhooks. Invoices are created and sent automatically. | A named account team handles billing problems. Nobody hand-sends an invoice. |
 | <img class="api-logo" src="/logos/portal/stripe.png" alt=""> Stripe | The earlier billing path. Clients on it update cards through Stripe's hosted billing portal. | The portal never touches card data. |
-| <span class="api-logo"></span> eSignatures | Sends contracts, receives the signed webhook and keeps its own copy of the signed PDF. Only one contract can go out per client at a time. | A double click once could send two contracts. A link to someone else's PDF isn't a record. |
+| <img class="api-logo" src="/logos/portal/esignatures.png" alt=""> eSignatures | Sends contracts, receives the signed webhook and keeps its own copy of the signed PDF. Only one contract can go out per client at a time. | A double click once could send two contracts. A link to someone else's PDF isn't a record. |
 | <img class="api-logo" src="/logos/portal/workos.png" alt=""> WorkOS | Sign-in for the first version, still on for one client account. | Changing sign-in providers can't lock out a client. |
 
 ### Calendars, calls and meetings
