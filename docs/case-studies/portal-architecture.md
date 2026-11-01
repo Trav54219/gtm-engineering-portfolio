@@ -84,7 +84,7 @@ Every key lives in the Convex production environment, never in the browser or th
 | <img class="api-logo" src="/logos/portal/deepinfra.png" alt=""> DeepInfra | Default for high-volume work: reply classification and the qualified-lead gate. | Cheap and called constantly. |
 | <img class="api-logo" src="/logos/portal/openrouter.png" alt=""> OpenRouter | First choice for copy and introductions. Each call is tagged with the app, so spend can be traced. | The best model for the output that matters most. |
 | <img class="api-logo" src="/logos/portal/openai.png" alt=""> OpenAI | Direct model access in the router. | A third provider behind the same interface. |
-| TypeSafe | A decision model: typed questions in, one typed answer each. | Yes/no and category calls shouldn't be parsed out of free text. |
+| <span class="api-logo"></span> TypeSafe | A decision model: typed questions in, one typed answer each. | Yes/no and category calls shouldn't be parsed out of free text. |
 | <img class="api-logo" src="/logos/portal/anthropic.png" alt=""> Anthropic<br><img class="api-logo" src="/logos/portal/openai.png" alt=""> OpenAI<br><img class="api-logo" src="/logos/portal/openrouter.png" alt=""> OpenRouter<br><img class="api-logo" src="/logos/portal/deepinfra.png" alt=""> DeepInfra<br>(billing APIs) | Read-only spend sync into the AI cost dashboard. | Cost per client and per feature, not one monthly total. |
 
 ### Money, contracts and sign-in
@@ -93,7 +93,7 @@ Every key lives in the Convex production environment, never in the browser or th
 |---|---|---|
 | <img class="api-logo" src="/logos/portal/whop.png" alt=""> Whop | Payments, invoices, memberships and sign-in, plus 2 webhooks. Invoices are created and sent automatically. | A named account team handles billing problems. Nobody hand-sends an invoice. |
 | <img class="api-logo" src="/logos/portal/stripe.png" alt=""> Stripe | The earlier billing path. Clients on it update cards through Stripe's hosted billing portal. | The portal never touches card data. |
-| eSignatures | Sends contracts, receives the signed webhook and keeps its own copy of the signed PDF. Only one contract can go out per client at a time. | A double click once could send two contracts. A link to someone else's PDF isn't a record. |
+| <span class="api-logo"></span> eSignatures | Sends contracts, receives the signed webhook and keeps its own copy of the signed PDF. Only one contract can go out per client at a time. | A double click once could send two contracts. A link to someone else's PDF isn't a record. |
 | <img class="api-logo" src="/logos/portal/workos.png" alt=""> WorkOS | Sign-in for the first version, still on for one client account. | Changing sign-in providers can't lock out a client. |
 
 ### Calendars, calls and meetings
@@ -129,8 +129,8 @@ Every key lives in the Convex production environment, never in the browser or th
 | <img class="api-logo" src="/logos/portal/slack.png" alt=""> Slack | Ops alerts by webhook. A bot creates each client's channel, sends the Slack Connect invite and posts booked calls. | Clients and staff already live in Slack. |
 | <img class="api-logo" src="/logos/portal/linear.png" alt=""> Linear | When a contract is signed, a project for that client is created with the fulfillment checklist. | Onboarding starts as a ready queue, not something to remember. |
 | <img class="api-logo" src="/logos/portal/resend.png" alt=""> Resend | Transactional email to clients, such as a broken-calendar alert with a reconnect link. | Kept off the cold-email fleet, so client notices don't land in spam. |
-| Photon | iMessage alerts to reps on speed-to-lead hand-offs, opt-in per rep. | A text gets seen faster than an email. |
-| Web Push | Browser notifications per device for client users. | Hot replies reach a client without the tab open. |
+| <span class="api-logo"></span> Photon | iMessage alerts to reps on speed-to-lead hand-offs, opt-in per rep. | A text gets seen faster than an email. |
+| <span class="api-logo"></span> Web Push | Browser notifications per device for client users. | Hot replies reach a client without the tab open. |
 | <img class="api-logo" src="/logos/portal/sentry.png" alt=""> Sentry | Error reporting from the frontend. | A deploy that catches an open tab reloads quietly and isn't counted as an error. |
 
 ## The lead build, step by step
@@ -138,12 +138,12 @@ Every key lives in the Convex production environment, never in the browser or th
 The lead build turns a list of companies into verified decision-makers, with treg in the middle.
 
 ```mermaid
-flowchart LR
-  Q[Claim up to 20 rows] --> S[1. Read the company site<br/>plain fetch, free]
-  S --> G[2a. GetLeads<br/>decision-makers]
-  G -->|no one found| T[2b. treg people search<br/>then email find]
+flowchart TD
+  Q[Claim up to 20 rows] --> S[Read the company site<br/>plain fetch, free]
+  S --> G[GetLeads<br/>decision-makers]
+  G -->|no one found| T[treg people search<br/>then email find]
   G --> V
-  T --> V[3. DeBounce verify<br/>malformed = skipped, no credit]
+  T --> V[DeBounce verify<br/>malformed = skipped, no credit]
   V --> R[Record every row in one write]
   R --> N[Reschedule the next batch]
 ```
@@ -155,7 +155,7 @@ flowchart LR
 ## Every paid call goes through one spend gate
 
 ```mermaid
-flowchart LR
+flowchart TD
   C[Feature wants a paid call] --> E[Estimate worst-case cost]
   E --> G{Spend gate}
   G -->|over cap, held, or<br/>same vendor already running| X[Refused with a reason]
@@ -240,7 +240,7 @@ Most of them post to Slack or roll into a digest, so problems come to me instead
 Clay can push enriched rows into the portal and get them back after the portal works on them.
 
 ```mermaid
-flowchart LR
+flowchart TD
   CT[Clay table] -->|HTTP action, bearer secret| E[Convex /clay/rows]
   E --> V{Verify}
   V -->|bad or unknown| R[401, same answer either way]
