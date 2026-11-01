@@ -60,78 +60,78 @@ Every key lives in the Convex production environment, never in the browser or th
 
 | Service | How the portal uses it | Why |
 |---|---|---|
-| Smartlead | Campaigns, leads, sequences, A/B stats, replies, warm-up stats. 7 webhooks plus a sync job every 15 minutes. | The sequencer every live campaign runs on. |
-| PlusVibe | A full adapter behind a per-campaign provider switch, with separate switches for reads and writes. | Better pricing per email sent at fleet volume. [Write-up](plusvibe-integration.md). |
-| Inframail, Mailforge | Create and delete sending mailboxes per client, pull their SMTP and IMAP details, connect them to Smartlead. | Inboxes are tracked per client, so deleting a churned client's inboxes is one action. |
-| ScaledMail | Reads orders and status. Buying domains is a deliberate, admin-only click. | Anything that charges money is never automatic. |
-| MailReef | Read-only, by policy. A job writes live usage into the spend ledger. | Its write endpoints buy domains and servers. The ledger replaced typing invoices in by hand. |
+| <img class="api-logo" src="/logos/portal/smartlead.png" alt=""> Smartlead | Campaigns, leads, sequences, A/B stats, replies, warm-up stats. 7 webhooks plus a sync job every 15 minutes. | The sequencer every live campaign runs on. |
+| <img class="api-logo" src="/logos/portal/plusvibe.png" alt=""> PlusVibe | A full adapter behind a per-campaign provider switch, with separate switches for reads and writes. | Better pricing per email sent at fleet volume. [Write-up](plusvibe-integration.md). |
+| <img class="api-logo" src="/logos/portal/inframail.png" alt=""> Inframail<br><img class="api-logo" src="/logos/portal/mailforge.png" alt=""> Mailforge | Create and delete sending mailboxes per client, pull their SMTP and IMAP details, connect them to Smartlead. | Inboxes are tracked per client, so deleting a churned client's inboxes is one action. |
+| <img class="api-logo" src="/logos/portal/scaledmail.png" alt=""> ScaledMail | Reads orders and status. Buying domains is a deliberate, admin-only click. | Anything that charges money is never automatic. |
+| <img class="api-logo" src="/logos/portal/mailreef.png" alt=""> MailReef | Read-only, by policy. A job writes live usage into the spend ledger. | Its write endpoints buy domains and servers. The ledger replaced typing invoices in by hand. |
 
 ### Lead data and enrichment
 
 | Service | How the portal uses it | Why |
 |---|---|---|
-| treg | People search and email find in the lead build, after GetLeads. Every call carries a maximum cost, so one call can't charge more than its cap. | One key in front of many priced data endpoints, so each step uses the cheapest provider that works. |
-| GetLeads | First step for finding decision-makers in the lead build, paced under 80 calls a minute per job. | It answers decision-maker lookups directly. Slow or empty answers are retried, never stored as a miss. |
-| Blitz, Prospeo | Email-finding steps in the CRM enrichment waterfall. | A waterfall stops at the first hit, so the cheaper source goes first. |
-| DeBounce | Verifies every address before it's used. A malformed address is rejected before it costs a credit. | Bounces burn sending domains. |
-| TinyFish, ZenRows | Read company websites: TinyFish first, ZenRows as the fallback. Used for enrichment, offer profiles and the competitor sweep. | Website text is the cheapest research there is, and the fallback covers sites that block plain fetches. |
-| Apify, Firecrawl, Serper | Balance checks only, synced into the spend dashboard. | Every prepaid credit is visible in one place before it runs out. |
+| <img class="api-logo" src="/logos/portal/treg.png" alt=""> treg | People search and email find in the lead build, after GetLeads. Every call carries a maximum cost, so one call can't charge more than its cap. | One key in front of many priced data endpoints, so each step uses the cheapest provider that works. |
+| <img class="api-logo" src="/logos/portal/getleads.png" alt=""> GetLeads | First step for finding decision-makers in the lead build, paced under 80 calls a minute per job. | It answers decision-maker lookups directly. Slow or empty answers are retried, never stored as a miss. |
+| <img class="api-logo" src="/logos/portal/blitz.png" alt=""> Blitz<br><img class="api-logo" src="/logos/portal/prospeo.png" alt=""> Prospeo | Email-finding steps in the CRM enrichment waterfall. | A waterfall stops at the first hit, so the cheaper source goes first. |
+| <img class="api-logo" src="/logos/portal/debounce.png" alt=""> DeBounce | Verifies every address before it's used. A malformed address is rejected before it costs a credit. | Bounces burn sending domains. |
+| <img class="api-logo" src="/logos/portal/tinyfish.png" alt=""> TinyFish<br><img class="api-logo" src="/logos/portal/zenrows.png" alt=""> ZenRows | Read company websites: TinyFish first, ZenRows as the fallback. Used for enrichment, offer profiles and the competitor sweep. | Website text is the cheapest research there is, and the fallback covers sites that block plain fetches. |
+| <img class="api-logo" src="/logos/portal/apify.png" alt=""> Apify<br><img class="api-logo" src="/logos/portal/firecrawl.png" alt=""> Firecrawl<br><img class="api-logo" src="/logos/portal/serper.png" alt=""> Serper | Balance checks only, synced into the spend dashboard. | Every prepaid credit is visible in one place before it runs out. |
 
 ### AI models
 
 | Service | How the portal uses it | Why |
 |---|---|---|
-| DeepInfra | Default for high-volume work: reply classification and the qualified-lead gate. | Cheap and called constantly. |
-| OpenRouter | First choice for copy and introductions. Each call is tagged with the app, so spend can be traced. | The best model for the output that matters most. |
-| OpenAI | Direct model access in the router. | A third provider behind the same interface. |
+| <img class="api-logo" src="/logos/portal/deepinfra.png" alt=""> DeepInfra | Default for high-volume work: reply classification and the qualified-lead gate. | Cheap and called constantly. |
+| <img class="api-logo" src="/logos/portal/openrouter.png" alt=""> OpenRouter | First choice for copy and introductions. Each call is tagged with the app, so spend can be traced. | The best model for the output that matters most. |
+| <img class="api-logo" src="/logos/portal/openai.png" alt=""> OpenAI | Direct model access in the router. | A third provider behind the same interface. |
 | TypeSafe | A decision model: typed questions in, one typed answer each. | Yes/no and category calls shouldn't be parsed out of free text. |
-| Anthropic, OpenAI, OpenRouter, DeepInfra billing APIs | Read-only spend sync into the AI cost dashboard. | Cost per client and per feature, not one monthly total. |
+| <img class="api-logo" src="/logos/portal/anthropic.png" alt=""> Anthropic<br><img class="api-logo" src="/logos/portal/openai.png" alt=""> OpenAI<br><img class="api-logo" src="/logos/portal/openrouter.png" alt=""> OpenRouter<br><img class="api-logo" src="/logos/portal/deepinfra.png" alt=""> DeepInfra<br>(billing APIs) | Read-only spend sync into the AI cost dashboard. | Cost per client and per feature, not one monthly total. |
 
 ### Money, contracts and sign-in
 
 | Service | How the portal uses it | Why |
 |---|---|---|
-| Whop | Payments, invoices, memberships and sign-in, plus 2 webhooks. Invoices are created and sent automatically. | A named account team handles billing problems. Nobody hand-sends an invoice. |
-| Stripe | The earlier billing path. Clients on it update cards through Stripe's hosted billing portal. | The portal never touches card data. |
+| <img class="api-logo" src="/logos/portal/whop.png" alt=""> Whop | Payments, invoices, memberships and sign-in, plus 2 webhooks. Invoices are created and sent automatically. | A named account team handles billing problems. Nobody hand-sends an invoice. |
+| <img class="api-logo" src="/logos/portal/stripe.png" alt=""> Stripe | The earlier billing path. Clients on it update cards through Stripe's hosted billing portal. | The portal never touches card data. |
 | eSignatures | Sends contracts, receives the signed webhook and keeps its own copy of the signed PDF. Only one contract can go out per client at a time. | A double click once could send two contracts. A link to someone else's PDF isn't a record. |
-| WorkOS | Sign-in for the first version, still on for one client account. | Changing sign-in providers can't lock out a client. |
+| <img class="api-logo" src="/logos/portal/workos.png" alt=""> WorkOS | Sign-in for the first version, still on for one client account. | Changing sign-in providers can't lock out a client. |
 
 ### Calendars, calls and meetings
 
 | Service | How the portal uses it | Why |
 |---|---|---|
-| Google Calendar | Each rep connects their own calendar. The inbox shows their real free slots and books a real event with the prospect invited. | Booking from the reply itself is the fastest way from reply to meeting. |
-| Calendly, Cal.com | Fallbacks when a rep has no Google Calendar connected, each with OAuth and webhooks. | Reps book on whatever tool they already use. |
-| Fathom | Client-connected call recordings, pulled for meeting history and reviving old deals. | Past calls are context the AI can use, with the client's consent. |
-| Quo | Every booked call with a phone number becomes a contact on my own line, tagged with whether they agreed to texts. Nothing sends a text. | One-tap follow-up without risking unwanted texts. |
+| <img class="api-logo" src="/logos/portal/googlecalendar.png" alt=""> Google Calendar | Each rep connects their own calendar. The inbox shows their real free slots and books a real event with the prospect invited. | Booking from the reply itself is the fastest way from reply to meeting. |
+| <img class="api-logo" src="/logos/portal/calendly.png" alt=""> Calendly<br><img class="api-logo" src="/logos/portal/calcom.png" alt=""> Cal.com | Fallbacks when a rep has no Google Calendar connected, each with OAuth and webhooks. | Reps book on whatever tool they already use. |
+| <img class="api-logo" src="/logos/portal/fathom.png" alt=""> Fathom | Client-connected call recordings, pulled for meeting history and reviving old deals. | Past calls are context the AI can use, with the client's consent. |
+| <img class="api-logo" src="/logos/portal/quo.png" alt=""> Quo | Every booked call with a phone number becomes a contact on my own line, tagged with whether they agreed to texts. Nothing sends a text. | One-tap follow-up without risking unwanted texts. |
 
 ### CRM delivery and Clay
 
 | Service | How the portal uses it | Why |
 |---|---|---|
-| HubSpot, Salesforce | Sync into a local mirror of the client's CRM. Every cleanup, enrichment and scoring change is a change set that can be rolled back. | A bad bulk edit to a client's CRM has to be reversible. |
-| Pipedrive, Close, Attio, GoHighLevel | OAuth connect and lead delivery. A failed delivery retries with backoff before it asks a person. | A lead the client never sees is a lead they didn't pay for. |
-| Clay | The two-way bridge described below. | Clients and staff already enrich in Clay tables. |
+| <img class="api-logo" src="/logos/portal/hubspot.png" alt=""> HubSpot<br><img class="api-logo" src="/logos/portal/salesforce.png" alt=""> Salesforce | Sync into a local mirror of the client's CRM. Every cleanup, enrichment and scoring change is a change set that can be rolled back. | A bad bulk edit to a client's CRM has to be reversible. |
+| <img class="api-logo" src="/logos/portal/pipedrive.png" alt=""> Pipedrive<br><img class="api-logo" src="/logos/portal/close.png" alt=""> Close<br><img class="api-logo" src="/logos/portal/attio.png" alt=""> Attio<br><img class="api-logo" src="/logos/portal/gohighlevel.png" alt=""> GoHighLevel | OAuth connect and lead delivery. A failed delivery retries with backoff before it asks a person. | A lead the client never sees is a lead they didn't pay for. |
+| <img class="api-logo" src="/logos/portal/clay.png" alt=""> Clay | The two-way bridge described below. | Clients and staff already enrich in Clay tables. |
 
 ### Social, ads and media
 
 | Service | How the portal uses it | Why |
 |---|---|---|
-| Zernio | Social posting, ad accounts, DMs, comments and client phone numbers, with signed webhooks. | One API for the networks, so each network isn't a separate integration. |
-| Meta Ad Library | The weekly competitor sweep reads competitors' live ads. | Competitor ads show which offers they're paying to push. |
-| HeyGen, ElevenLabs, Higgsfield | Client avatar videos and voice clones, gated behind the client's own consent. | Video at scale without a filming day. |
-| Google Business Profile | 4 drafted posts a month per local client, held for staff review. | Drafts are never auto-published. |
+| <img class="api-logo" src="/logos/portal/zernio.png" alt=""> Zernio | Social posting, ad accounts, DMs, comments and client phone numbers, with signed webhooks. | One API for the networks, so each network isn't a separate integration. |
+| <img class="api-logo" src="/logos/portal/meta.png" alt=""> Meta Ad Library | The weekly competitor sweep reads competitors' live ads. | Competitor ads show which offers they're paying to push. |
+| <img class="api-logo" src="/logos/portal/heygen.png" alt=""> HeyGen<br><img class="api-logo" src="/logos/portal/elevenlabs.png" alt=""> ElevenLabs<br><img class="api-logo" src="/logos/portal/higgsfield.png" alt=""> Higgsfield | Client avatar videos and voice clones, gated behind the client's own consent. | Video at scale without a filming day. |
+| <img class="api-logo" src="/logos/portal/googlebusiness.png" alt=""> Google Business Profile | 4 drafted posts a month per local client, held for staff review. | Drafts are never auto-published. |
 
 ### Running the team
 
 | Service | How the portal uses it | Why |
 |---|---|---|
-| Slack | Ops alerts by webhook. A bot creates each client's channel, sends the Slack Connect invite and posts booked calls. | Clients and staff already live in Slack. |
-| Linear | When a contract is signed, a project for that client is created with the fulfillment checklist. | Onboarding starts as a ready queue, not something to remember. |
-| Resend | Transactional email to clients, such as a broken-calendar alert with a reconnect link. | Kept off the cold-email fleet, so client notices don't land in spam. |
+| <img class="api-logo" src="/logos/portal/slack.png" alt=""> Slack | Ops alerts by webhook. A bot creates each client's channel, sends the Slack Connect invite and posts booked calls. | Clients and staff already live in Slack. |
+| <img class="api-logo" src="/logos/portal/linear.png" alt=""> Linear | When a contract is signed, a project for that client is created with the fulfillment checklist. | Onboarding starts as a ready queue, not something to remember. |
+| <img class="api-logo" src="/logos/portal/resend.png" alt=""> Resend | Transactional email to clients, such as a broken-calendar alert with a reconnect link. | Kept off the cold-email fleet, so client notices don't land in spam. |
 | Photon | iMessage alerts to reps on speed-to-lead hand-offs, opt-in per rep. | A text gets seen faster than an email. |
 | Web Push | Browser notifications per device for client users. | Hot replies reach a client without the tab open. |
-| Sentry | Error reporting from the frontend. | A deploy that catches an open tab reloads quietly and isn't counted as an error. |
+| <img class="api-logo" src="/logos/portal/sentry.png" alt=""> Sentry | Error reporting from the frontend. | A deploy that catches an open tab reloads quietly and isn't counted as an error. |
 
 ## The lead build, step by step
 
