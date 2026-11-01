@@ -61,7 +61,7 @@ flowchart TB
 - **Open tracking off, plain text, no images.** Tracking pixels and HTML templates are two of the easiest spam signals to remove.
 - **Check the relay, not just the domains.** Every inbox in the fleet once sent through a shared relay host that landed on Spamhaus. That's the [deliverability incident](deliverability-incident.md): 309 accounts replaced and 37 campaigns re-attached with zero mismatches.
 
-<a href="https://www.breezygrowthco.com/tools/domain-health"><img class="shot" src="https://www.breezygrowthco.com/proof/tool-domain-health-site.jpg" alt="Domain health tool: paste sending domains, get MX, SPF, DKIM, DMARC and domain age with the exact fix"></a>
+<a href="https://www.breezygrowthco.com/tools/domain-health"><img class="shot" src="https://www.breezygrowthco.com/proof/tool-domain-health-v2.jpg" alt="Domain health tool: paste sending domains, get MX, SPF, DKIM, DMARC and domain age with the exact fix"></a>
 
 *The [domain health tool](https://www.breezygrowthco.com/tools/domain-health): every sending domain checked at once, with the DNS record to add when one fails.*
 
@@ -141,7 +141,7 @@ An agent checks every lead against its own website before the lead can send. On 
 - **No em dashes, no hype words, no AI tells.** A copy gate fails the draft on any of them.
 - **The sequence stops on a reply.**
 
-<a href="https://www.breezygrowthco.com/tools/cold-email-checker"><img class="shot" src="https://www.breezygrowthco.com/proof/tool-cold-email-checker-site.jpg" alt="Cold email checker: spam phrases, AI tells, broken spintax and spintax conversion between sequencers"></a>
+<a href="https://www.breezygrowthco.com/tools/cold-email-checker"><img class="shot" src="https://www.breezygrowthco.com/proof/tool-cold-email-checker-v2.jpg" alt="Cold email checker: spam phrases, AI tells, broken spintax and spintax conversion between sequencers"></a>
 
 *The [cold email checker](https://www.breezygrowthco.com/tools/cold-email-checker) runs the same copy rules in the browser: spam phrases, AI-sounding lines, broken merge fields and spintax, plus conversion between Smartlead, Instantly and PlusVibe formats.*
 
@@ -204,7 +204,7 @@ flowchart TD
 
 An HVAC owner campaign sent about 2,000 emails to 717 owners, and all 19 categorized replies were machine or wrong-person. Deliverability had passed, so the list was the problem. The next campaign changed the audience, not the wording.
 
-<a href="https://www.breezygrowthco.com/tools/reply-rate-checker"><img class="shot" src="https://www.breezygrowthco.com/proof/tool-reply-rate-checker-site.jpg" alt="Reply rate checker: machine replies removed, rates on contacted leads, exact test for A/B winners"></a>
+<a href="https://www.breezygrowthco.com/tools/reply-rate-checker"><img class="shot" src="https://www.breezygrowthco.com/proof/tool-reply-rate-checker-v2.jpg" alt="Reply rate checker: machine replies removed, rates on contacted leads, exact test for A/B winners"></a>
 
 *The [reply rate checker](https://www.breezygrowthco.com/tools/reply-rate-checker): machine replies come out first, rates go on contacted leads, and an exact test says whether variant B really won.*
 
