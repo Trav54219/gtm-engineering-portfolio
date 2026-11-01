@@ -64,7 +64,7 @@ This is the first email of the sequence I am sending to hiring managers for this
 > Want me to send it over?
 >
 > Travis
-> GTM engineer and founder at Breezy Growth
+> GTM engineer at Breezy Growth, an outbound agency
 
 Why it is built this way: it opens on something true about them, asks one question, says what I do in one sentence, and asks for a yes to a one-page sketch instead of a call. No price, no link, no claim I can't show. The follow-up (day 7) says what the sketch contains: who I'd reach, a sample email in their voice, and the first 30 days, from public data only. The copy gate in `guards/copy_gate.py` checks every variant before it is built: 30 to 75 words, no banned words, the same ask in every variant.
 

@@ -94,7 +94,7 @@ Python, Claude Code (agents, skills, hooks), HubSpot CRM API, Smartlead API, Cla
 
 ## Career
 
-**Breezy Growth, GTM engineer and founder** (Sep 2024 to now, remote)
+**Breezy Growth, GTM engineer** (Sep 2024 to now, remote)
 - Run outbound end to end: niche, list, verification, copy and a sending fleet of 225 inboxes on 75 domains.
 - Client results: $325K+ revenue across 4 engagements and 15 introductions across 3. [The table](case-studies/client-results.md).
 - Wrote 9 pre-send guard scripts that block a launch, a lead add or a spend when something is wrong. [The code](https://github.com/Trav54219/gtm-engineering-portfolio/tree/main/guards).
