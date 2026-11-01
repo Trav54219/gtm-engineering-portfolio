@@ -30,28 +30,25 @@ Built with: Smartlead (PlusVibe added as a second sequencer), Blitz and other pr
 ## The whole system
 
 ```mermaid
-flowchart LR
+flowchart TB
   subgraph Infra["1. Infrastructure"]
-    A[Generic domain pool] --> B[Inboxes + SPF, DKIM, DMARC]
-    B --> C[Warm-up 14+ days]
+    direction LR
+    A[Generic domain pool] --> B[Inboxes + SPF, DKIM, DMARC] --> C[Warm-up 14+ days]
   end
   subgraph List["2. List"]
-    D[Signal: job post, funding, bid] --> E[Free company filter]
-    E --> F[Find the person]
-    F --> G[Find + verify the email]
-    G --> H[Fit agent reads their site]
+    direction LR
+    D[Signal: job post, funding, bid] --> E[Free company filter] --> F[Find the person] --> G[Find + verify the email] --> H[Fit agent reads their site]
   end
   subgraph Send["3. Send"]
-    I[Copy with checked facts] --> J[Preflight gate]
-    J --> K[Send at a low cap, ramp]
+    direction LR
+    I[Copy with checked facts] --> J[Preflight gate] --> K[Send at a low cap, ramp]
   end
   subgraph Learn["4. Judge"]
+    direction LR
     L[Rates on contacted leads] --> M[Cost per positive reply]
   end
-  C --> I
-  H --> I
-  K --> L
-  M -.list or offer problem.-> D
+  Infra --> List --> Send --> Learn
+  Learn -.list or offer problem.-> List
 ```
 
 ## 1. Sending infrastructure
