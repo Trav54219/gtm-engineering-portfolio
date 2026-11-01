@@ -63,7 +63,7 @@ flowchart TB
 
 <img class="shot" src="https://www.breezygrowthco.com/proof/tool-domain-health.jpg" alt="Domain health tool: paste sending domains, get MX, SPF, DKIM, DMARC and domain age with the exact fix">
 
-*The [domain health tool](https://trav54219.github.io/domain-health/): every sending domain checked at once, with the DNS record to add when one fails.*
+*The [domain health tool](https://www.breezygrowthco.com/tools/domain-health): every sending domain checked at once, with the DNS record to add when one fails.*
 
 ## 2. Warm-up, measured
 
@@ -143,7 +143,7 @@ An agent checks every lead against its own website before the lead can send. On 
 
 <img class="shot" src="https://www.breezygrowthco.com/proof/tool-cold-email-checker.jpg" alt="Cold email checker: spam phrases, AI tells, broken spintax and spintax conversion between sequencers">
 
-*The [cold email checker](https://trav54219.github.io/cold-email-checker/) runs the same copy rules in the browser: spam phrases, AI-sounding lines, broken merge fields and spintax, plus conversion between Smartlead, Instantly and PlusVibe formats.*
+*The [cold email checker](https://www.breezygrowthco.com/tools/cold-email-checker) runs the same copy rules in the browser: spam phrases, AI-sounding lines, broken merge fields and spintax, plus conversion between Smartlead, Instantly and PlusVibe formats.*
 
 ## 7. Launch: a guard on every step
 
@@ -206,7 +206,7 @@ An HVAC owner campaign sent about 2,000 emails to 717 owners, and all 19 categor
 
 <img class="shot" src="https://www.breezygrowthco.com/proof/tool-reply-rate-checker.jpg" alt="Reply rate checker: machine replies removed, rates on contacted leads, exact test for A/B winners">
 
-*The [reply rate checker](https://trav54219.github.io/reply-rate-checker/): machine replies come out first, rates go on contacted leads, and an exact test says whether variant B really won.*
+*The [reply rate checker](https://www.breezygrowthco.com/tools/reply-rate-checker): machine replies come out first, rates go on contacted leads, and an exact test says whether variant B really won.*
 
 **What I'd do differently:** check the relay host every inbox sends through, not just the sending domains, before uploading a fleet. That's the [deliverability incident](deliverability-incident.md) that stalled launches for three weeks.
 
