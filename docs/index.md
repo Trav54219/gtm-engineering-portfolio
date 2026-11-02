@@ -4,7 +4,7 @@ layout: default
 
 # I'm a GTM engineer. I build list and research systems that check their own work, for B2B teams that sell on contracts.
 
-Software engineer at Fidelity first, then I started an outbound agency and ran it end to end.
+Software engineer at Fidelity first, then GTM engineer at Breezy Growth, an outbound agency, building and running outbound for B2B clients end to end.
 
 **What I want:** a GTM engineer role, full-time or contract, in New York (hybrid or on-site) or remote in the US.
 
