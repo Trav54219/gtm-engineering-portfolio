@@ -39,7 +39,7 @@ flowchart LR
 
 The systems I build have users: reps, marketers, CS managers, RevOps, and at Breezy Growth, clients. If they don't use it, it doesn't matter how well it's built.
 
-- **Start with the friction, not the tool.** I'd rather spend the first weeks sitting in on calls and asking each team what wastes their time than pick a stack first. The roadmap is their list of friction, ranked by what it costs.
+- **Start with the friction, not the tool.** I'd rather spend the first weeks sitting in on calls and asking each team what wastes their time than pick a stack first. The roadmap is their list of friction, ranked by what it costs. Here's [a sample GTM engineering roadmap](gtm-roadmap.md).
 - **Every use case has an owner team and a number it should move.** A signal feed exists to raise meetings per rep. A dedupe exists so routing and reporting can be trusted. If I can't name the number, it doesn't go on the roadmap yet.
 - **Ship small, in production, early.** One quick win that reps feel the same week buys the trust to build the bigger foundation.
 - **Built so people can rely on it without me.** Documentation, monitoring and tests are part of shipping. That's why the client portal has an [architecture write-up](portal-architecture.md): someone other than me should be able to see how it works and what breaks when.
