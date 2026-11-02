@@ -96,6 +96,8 @@ Most tests lose, and that's fine as long as they're cheap and the loss is record
 
 When something does work, it gets volume: more of the same signal, the same offer and the same audience, on more inboxes.
 
+The scorecard, the checklists and the math behind each of these calls are on [campaign scorecard, checklist and the math](campaign-scorecard.md).
+
 ## 6. Volume comes from many small inboxes
 
 I'd rather send 10 cold emails a day from each of 225 inboxes than 200 a day from a dozen.
@@ -144,6 +146,8 @@ Sends, opens and activities are easy to count and easy to inflate. The business 
 - **The denominator is contacted leads.** Replies from machines and wrong people come out first, in their own column.
 - **Misses get reported the same way as wins.** My scoreboard has every campaign on it, including the ones that produced nothing. A report that only shows wins can't tell anyone what to stop doing.
 - **One page, every week.** If leadership has to ask how GTM engineering is going, the report failed.
+
+The template I use is the [campaign scorecard](campaign-scorecard.md).
 
 ## 11. Rules live in code
 
