@@ -1,9 +1,9 @@
 ---
 layout: default
-title: How I think about outbound
+title: My philosophy on go-to-market
 ---
 
-# How I think about outbound
+# My philosophy on go-to-market
 
 [How I build outbound from scratch](outbound-from-scratch.md) is the order I set a system up in. This page is why it's built that way: what I believe about cold traffic, offers, testing, volume and sending infrastructure, and the campaigns that taught me each one. Everything here comes from running cold email for B2B clients at Breezy Growth.
 
