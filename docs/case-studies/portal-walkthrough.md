@@ -174,6 +174,65 @@ erDiagram
 - **Duplicates are proposed, never merged automatically.** Companies match on domain (taken from the website when the domain field is empty), contacts on name plus company or a shared phone. In the HubSpot test build, the merge logic went 48 for 48 against an answer key, including 6 decoys. [The test build](crm-cleanup.md).
 - **Sync is incremental.** Each object type keeps its own cursor, status and retry time, so one failing object doesn't stop the others.
 
+## Onboarding and fulfillment, from signature to first send
+
+**The problem.** Onboarding started out spread across separate tools. The contract lived in eSignatures, the payment in Whop, and the Slack channel, task list and portal account were each set up by hand. A client once signed and I only found out by asking. Four of the six onboarding steps had no way to be marked done, so onboarding couldn't actually finish, and invoices were drafted by hand.
+
+**What I built:** one trigger that fans out to everything else.
+
+```mermaid
+flowchart TD
+  SIG[Contract signed<br/>eSignatures webhook] --> START{Start onboarding<br/>first trigger wins}
+  PAY[First payment<br/>Whop] --> START
+  CALL[Start on a call<br/>manual button] --> START
+  START --> BILL[Billing anchor + renewal date<br/>signed PDF archived]
+  START --> USER[Portal account<br/>+ kickoff email]
+  START --> SLACK[Client Slack channel<br/>+ Slack Connect invite]
+  START --> LIN[Linear project<br/>7-task fulfillment checklist]
+  KICK[Kickoff call saved] --> CSM[CSM tasks: copy day 3,<br/>first send day 7, first lead day 14]
+  USER --> STEPS[Client steps in the portal:<br/>form, call, domains warming,<br/>copy, first send]
+  STEPS --> LIVE[Campaign live:<br/>email + Slack + in-app alert]
+  STEPS -.->|stuck 3+ days| STALL[Stall flag + nudges<br/>escalates to ops Slack]
+```
+
+- **One event, no double onboarding.** A signature and a first payment can both start onboarding. Whichever lands first wins, and the second does nothing.
+- **Fulfillment is a checklist, not memory.** The Linear project lists the work in order: kickoff and ICP, 20 domains with DNS, 60 inboxes warming, campaign built, lead list and sample, copy, first send scheduled.
+- **Every client sees where they are.** The portal shows each step. A step stuck 3 days or more is flagged in the admin view and the daily digest, and nudges go out every 2 days before it escalates.
+- **After launch, fulfillment runs on timers.** Reply SLA every 3 hours, a first-lead SLA and a sending-stall check daily, health scores daily, and performance and churn-risk digests weekly.
+- **What it solved:** a signed client gets a channel, a project, an account and a timeline from one event, and nothing goes quiet without an alert.
+
+## Sourcing lists from directories
+
+The best lists usually aren't in a contact database. They're in association member lists, government registers, certification registries and trade directories, so that's where the lead build starts.
+
+```mermaid
+flowchart TB
+  subgraph Find["1. Find the companies"]
+    direction LR
+    N[Pick a niche<br/>scored niche bank] --> MAP[Source map:<br/>associations, gov registers,<br/>certifications, directories]
+    MAP --> SCR[Scrape public pages<br/>login wall = blocked]
+    SCR --> DOM[Domain from a real link<br/>never guessed]
+    N --> GM[Local niches:<br/>live Google Maps<br/>crawl4ai on treg]
+    DOM --> MERGE[Merge + dedupe<br/>domain, LinkedIn, name + address]
+    GM --> MERGE
+    MERGE -.->|dropped| EX[excluded.csv<br/>with a reason]
+  end
+  subgraph People["2. Find and verify the people"]
+    direction LR
+    SWEEP[treg price sweep<br/>cheapest per step] --> PROBE[Probe 10 rows<br/>rows x price first]
+    PROBE --> FIND[Email: free pattern<br/>guesses + DeBounce,<br/>then paid finder]
+    FIND --> VER[MailTester pass<br/>valid + risky only]
+    VER --> CAMP[Campaign upload]
+  end
+  Find --> People
+```
+
+- **Map before fetching.** Every source is listed and typed before anything is scraped. A domain is only taken from an explicit website link or a company email, never guessed from the name.
+- **treg is the data layer.** One key in front of about 3,500 endpoints across 113 platforms. My own vendor keys run first and treg credits are the fallback. Every paid call carries a cost cap.
+- **Cheap where it can be.** Live Google Maps search runs at $0.00015 a call for up to 100 businesses. Email finding tries free pattern guesses first and only pays when there's evidence of the person's name and role. One test found 7 of 7 owners at $0.0045 per found email.
+- **Cost discipline came from a loss.** I once paid $0.02 a row for 600 rows when another provider charged $0.0005. Now every job probes 10 rows and states rows x price before it runs at volume.
+- **Nothing is dropped silently.** Every excluded row is written out with the reason.
+
 ## The lead build, step by step
 
 ```mermaid
