@@ -16,11 +16,8 @@ Built with: TypeScript, Next.js (App Router), Convex, Tailwind, Vercel, Whop and
 | Client | Result | Time |
 |---|---|---|
 | Regent Peak Wealth Advisors | 6 qualified introductions | 45 days |
-| Respilon | 3 qualified introductions | about 43 days |
-| Clean Seas West Virginia | 6 routed introductions | 120 days |
 | Elate Staffing | 22 placements | 55 days |
 | Crawford Thomas Recruiting | 39 candidate placements | one quarter |
-| FabuLingua | 5 new clients | 48 days |
 
 Each number is stated the way the client's case study states it, with the time it took. [Every engagement](client-results.md).
 
