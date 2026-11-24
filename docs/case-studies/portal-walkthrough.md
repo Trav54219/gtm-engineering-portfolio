@@ -9,7 +9,15 @@ The portal runs Breezy Growth's outbound for live clients: lead builds, campaign
 
 **Size:** 298 database tables · 177 scheduled jobs · 23 inbound webhooks · 49 outside services · 77 API routes · 166 pages · 1,025 test files
 
-Built with: TypeScript, Next.js (App Router), Convex, Tailwind, Vercel, Whop and WorkOS for sign-in, Vitest, Playwright
+Built with: TypeScript, Next.js (App Router), Convex, Tailwind, Vercel, Whop and WorkOS for sign-in, Vitest, Playwright, Claude
+
+## What it delivered
+
+| Qualified introductions | Client revenue and placements | Fastest staffing result |
+|---|---|---|
+| **15** across 3 engagements | **$325K+** across 4 engagements | **22 placements** for Elate Staffing in 55 days |
+
+Each number is stated the way the client's case study states it, with the time it took. [Every engagement, broken out](client-results.md).
 
 ## The whole system
 
@@ -51,6 +59,31 @@ flowchart LR
 ```
 
 Three parts. Next.js handles pages and the doors other tools knock on. Convex holds the data, the business logic and every scheduled job, in one TypeScript codebase. Outside tools send events in and get calls back out.
+
+## Built with Claude, run on Claude
+
+```mermaid
+flowchart LR
+  subgraph Build["How it's built"]
+    CC[Several Claude Code agents] --> WT[One git worktree per change]
+    WT --> HK[Pre-commit hook:<br/>no commits on main]
+    HK --> CI[Full test suite<br/>gates every deploy]
+  end
+  subgraph Run["How it runs"]
+    R[Every inbound reply] --> CH[Cheap model:<br/>classify + qualify]
+    CP[Campaign copy +<br/>introductions] --> OP[Claude Opus]
+  end
+  subgraph Reach["How agents reach it"]
+    M1[Client MCP · 6 tools<br/>key scoped to one client]
+    M2[GTM MCP · 27 tools<br/>staff only]
+    M3[Tickets MCP · 6 tools]
+  end
+```
+
+- **Model choice follows one rule.** High volume and recoverable gets the cheap model. Low volume and irreversible gets the best one. Reply sorting runs on every reply, and a wrong label gets fixed by the next person who reads the thread. Campaign copy is written once and sent thousands of times, and a bad introduction burns both sides, so those run on Claude Opus.
+- **Agents never touch the database.** Mine and clients' own agents reach the portal through MCP servers. A client key only sees that client's data and is scrubbed from logs. My own operating view (campaigns, hot replies, spend, domain health) is 27 MCP tools I call from Claude every day.
+- **The repo is built for several agents at once.** Each change goes in its own worktree, files are staged by path, and a git hook refuses a commit made directly on main. Every merge runs the full test suite before it builds.
+- **AI output is graded before it ships.** Every prompt change to the reply AI runs against a test set of 475 prospect replies. Each draft is scored on six criteria, and every score has to quote the draft. [The eval](ai-inbox-eval.md).
 
 ## The outside APIs and why each one is there
 
@@ -110,6 +143,29 @@ flowchart TD
 - Clay's HTTP action can set a header but can't compute a signature, so the bridge accepts a bearer secret or a signature over the raw body.
 - A missing connection and a wrong secret return the same 401, so nobody can probe for valid ids.
 - Signing secrets are encrypted at rest, and an outbound webhook can only go to a public address.
+
+## The CRM data model
+
+Every client CRM is mirrored into the portal. Cleanup, enrichment and scoring are computed against the mirror, and the only thing that ever writes back to the client's CRM is an approved change set.
+
+```mermaid
+erDiagram
+  CRM_CONNECTION ||--|| SYNC_CONFIG : "kill switch, dry run, field map"
+  CRM_CONNECTION ||--o{ OBJECT_STATE : "sync cursor per object"
+  CRM_CONNECTION ||--o{ MIRROR_RECORD : "company, contact, deal"
+  CLEANING_RUN ||--o| CHANGE_SET : proposes
+  ENRICH_RUN ||--o| CHANGE_SET : proposes
+  SCORE_RUN ||--o| CHANGE_SET : proposes
+  CHANGE_SET ||--o{ CHANGE : "one line per field"
+  MIRROR_RECORD ||--o{ CHANGE : "before and after"
+  CHANGE_SET ||--o| CHANGE_SET : "rollback of"
+```
+
+- **Every change is one field, with its before and after value.** When a change set is submitted, each "before" is checked against the mirror as it is now. If the record has moved, that line is marked stale and is never written.
+- **The first write to a client's CRM needs a named approval.** Each connection also has a kill switch and a dry-run-only mode.
+- **Rollback is a change set too.** It builds the inverse lines. A field that changed in the CRM since then is left alone, not overwritten.
+- **Duplicates are proposed, never merged automatically.** Companies match on domain (taken from the website when the domain field is empty), contacts on name plus company or a shared phone. In the HubSpot test build, the merge logic went 48 for 48 against an answer key, including 6 decoys. [The test build](crm-cleanup.md).
+- **Sync is incremental.** Each object type keeps its own cursor, status and retry time, so one failing object doesn't stop the others.
 
 ## The lead build, step by step
 
@@ -202,15 +258,11 @@ sequenceDiagram
 
 177 jobs in all. Most post to Slack or roll into a digest, so problems come to me instead of waiting for me to check.
 
-## AI agents work through MCP, not the database
-
-AI agents, mine and clients' own, reach the portal through MCP servers. Each client key is scoped to that client and scrubbed from logs. An agent can read campaigns and file tickets without holding a database credential.
-
 ## Rules the code enforces
 
 - **A database blip never signs a client out.** That bug logged real clients out once. A test now pins the rule.
 - **Open tabs survive deploys.** Changes to public functions stay additive, because an open tab runs yesterday's code against today's backend.
-- **A failing test blocks the deploy.** Every merge to main runs the full suite before it builds.
+- **Anything that costs money is a deliberate click.** Domain and inbox purchases are never automatic.
 
 ## What I'd change
 
