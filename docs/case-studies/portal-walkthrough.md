@@ -13,11 +13,16 @@ Built with: TypeScript, Next.js (App Router), Convex, Tailwind, Vercel, Whop and
 
 ## What it delivered
 
-| Qualified introductions | Client revenue and placements | Fastest staffing result |
+| Client | Result | Time |
 |---|---|---|
-| **15** across 3 engagements | **$325K+** across 4 engagements | **22 placements** for Elate Staffing in 55 days |
+| Regent Peak Wealth Advisors | 6 qualified introductions | 45 days |
+| Respilon | 3 qualified introductions | about 43 days |
+| Clean Seas West Virginia | 6 routed introductions | 120 days |
+| Elate Staffing | 22 placements | 55 days |
+| Crawford Thomas Recruiting | 39 candidate placements | one quarter |
+| FabuLingua | 5 new clients | 48 days |
 
-Each number is stated the way the client's case study states it, with the time it took. [Every engagement, broken out](client-results.md).
+Each number is stated the way the client's case study states it, with the time it took. [Every engagement](client-results.md).
 
 ## The whole system
 
