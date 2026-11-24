@@ -19,8 +19,6 @@ Built with: TypeScript, Next.js (App Router), Convex, Tailwind, Vercel, Whop and
 | Elate Staffing | 22 placements | 55 days |
 | Crawford Thomas Recruiting | 39 candidate placements | one quarter |
 
-Each number is stated the way the client's case study states it, with the time it took. [Every engagement](client-results.md).
-
 ## The whole system
 
 ```mermaid
