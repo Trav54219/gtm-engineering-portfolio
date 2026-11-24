@@ -63,21 +63,26 @@ Three parts. Next.js handles pages and the doors other tools knock on. Convex ho
 ## Built with Claude, run on Claude
 
 ```mermaid
-flowchart LR
+flowchart TB
   subgraph Build["How it's built"]
+    direction LR
     CC[Several Claude Code agents] --> WT[One git worktree per change]
     WT --> HK[Pre-commit hook:<br/>no commits on main]
     HK --> CI[Full test suite<br/>gates every deploy]
   end
   subgraph Run["How it runs"]
+    direction LR
     R[Every inbound reply] --> CH[Cheap model:<br/>classify + qualify]
     CP[Campaign copy +<br/>introductions] --> OP[Claude Opus]
   end
   subgraph Reach["How agents reach it"]
+    direction LR
     M1[Client MCP · 6 tools<br/>key scoped to one client]
     M2[GTM MCP · 27 tools<br/>staff only]
     M3[Tickets MCP · 6 tools]
+    M1 ~~~ M2 ~~~ M3
   end
+  Build ~~~ Run ~~~ Reach
 ```
 
 - **Model choice follows one rule.** High volume and recoverable gets the cheap model. Low volume and irreversible gets the best one. Reply sorting runs on every reply, and a wrong label gets fixed by the next person who reads the thread. Campaign copy is written once and sent thousands of times, and a bad introduction burns both sides, so those run on Claude Opus.
