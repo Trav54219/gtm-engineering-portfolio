@@ -329,9 +329,3 @@ sequenceDiagram
 - **A database blip never signs a client out.** That bug logged real clients out once. A test now pins the rule.
 - **Open tabs survive deploys.** Changes to public functions stay additive, because an open tab runs yesterday's code against today's backend.
 - **Anything that costs money is a deliberate click.** Domain and inbox purchases are never automatic.
-
-## What I'd change
-
-Add a staging environment. Batched deploys and additive changes work, but they rely on discipline.
-
-**More:** [Full architecture write-up](portal-architecture.md) · [How I chose the stack](stack-decisions.md) · [The deliverability incident](deliverability-incident.md)
