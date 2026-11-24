@@ -102,7 +102,7 @@ Every key lives in the Convex production environment, never in the browser. An i
 |---|---|---|
 | <img class="api-logo" src="/logos/portal/smartlead.png" alt=""> Smartlead | Campaigns, leads, sequences, A/B stats, replies, warm-up stats. 7 webhooks plus a sync job every 15 minutes. | The sequencer the live campaigns ran on. |
 | <img class="api-logo" src="/logos/portal/plusvibe.png" alt=""> PlusVibe | A full adapter behind a per-campaign provider switch. | Lower cost per email at fleet volume. Switching sequencers is a setting, not a rebuild. |
-| <img class="api-logo" src="/logos/portal/inframail.png" alt=""> Inframail<br><img class="api-logo" src="/logos/portal/mailforge.png" alt=""> Mailforge | Create and delete sending mailboxes per client and connect them to the sequencer. | Inbox cost is tracked per client, so margin per account is real. |
+| <img class="api-logo" src="/logos/portal/peeker.png" alt=""> Peeker<br><img class="api-logo" src="/logos/portal/scaledmail.png" alt=""> ScaledMail | Sending domains and Google inboxes. Orders and status sync into the portal's domain plan, and buying is a deliberate admin click. | Inbox cost is tracked per client, so margin per account is real. |
 
 ### Lead data and enrichment
 
