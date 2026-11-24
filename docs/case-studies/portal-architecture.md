@@ -7,7 +7,7 @@ title: How the client portal is built
 
 The portal runs Breezy Growth's outbound for live clients: campaigns, replies, approvals, billing, reporting and the AI agents that work inside it. The repo is private, so this page shows the architecture and the reasons behind it, not the code.
 
-**Size:** 1,822 commits since June 2026 · 298 database tables · 177 scheduled jobs · 23 inbound webhooks · 49 outside services · 77 API routes · 166 pages · 1,025 test files
+**Size:** 298 database tables · 177 scheduled jobs · 23 inbound webhooks · 49 outside services · 77 API routes · 166 pages · 1,025 test files
 
 Built with: TypeScript, Next.js (App Router), Convex, Tailwind, Vercel, Whop and WorkOS for sign-in, Vitest, Playwright
 
